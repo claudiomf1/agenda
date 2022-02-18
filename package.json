@@ -1,0 +1,17 @@
+{
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    },
+    "dependencies": {
+        "@types/google-apps-script": "^1.0.45",
+        "parcel-plugin-inliner": "^1.0.16",
+        "posthtml": "^0.16.5"
+    },
+    "scripts": {
+        "run": "parcel build client/index.html --no-minify --no-cache --no-source-maps && node util.js && clasp 
+        push && xdg - open(https: //script.google.com/macros/library/d/1UXDFEQp5Xoirpj5Dvln_Pk0WAX_NZ8d_XppDCV_3cgsFODUkJ1uCo_fz/1)",
+            "watch": "nodemon --watch client --watch server --exec \"npm run run\" --ext js,html,scss,css"
+        }
+
+
+    }
