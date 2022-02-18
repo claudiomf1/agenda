@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <section class="container">
-   
-        <h1 class="corpo">Lista de tarefas</h1>
-        <p>
-            <input type="text" class="input-tarefa">
-            <button class="btn-tarefa">Adicionar tarefa</button>
-        </p>
-        <ul class="tarefas"></ul>
-    </section>
-    <script>// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -242,6 +223,4 @@ function adicionaTarefasSalvas() {
 }
 
 adicionaTarefasSalvas();
-},{}]},{},["d6sW"], null)</script>
-</body>
-</html>
+},{}]},{},["d6sW"], null)
