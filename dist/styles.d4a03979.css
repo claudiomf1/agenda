@@ -1,7 +1,6 @@
 .apagar {
     position: relative;
     left: 10px;
-    font-size: 0.8em;
 }
 
 .btn-tarefa {
@@ -11,9 +10,5 @@
 }
 
 .input-tarefa {
-    font-size: 1.5em;
-}
-
-.li {
-    font-size: 1.6em;
+    size: 1.5em;
 }

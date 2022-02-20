@@ -6,7 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="/styles.3840924f.css" ref="stylesheet">
+    <style>.apagar {
+    position: relative;
+    left: 10px;
+    font-size: 0.8em;
+}
+
+.btn-tarefa {
+    background-color: rgb(128, 98, 0);
+    color: white;
+    font-size: 1.5em;
+}
+
+.input-tarefa {
+    font-size: 1.5em;
+}
+
+.li {
+    font-size: 1.6em;
+}</style>
 </head>
 
 <body>
@@ -146,13 +164,15 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-document.addEventListener("DOMContentLoaded", function () {});
+//document.addEventListener("DOMContentLoaded", function() {})
 var inputTarefa = document.querySelector('.input-tarefa');
 var btnTarefa = document.querySelector('.btn-tarefa');
 var tarefas = document.querySelector('.tarefas');
 
 function criaLi() {
-  return document.createElement('li');
+  var li = document.createElement('li');
+  li.setAttribute('class', 'li');
+  return li;
 }
 
 function teclaKeyPress(e) {

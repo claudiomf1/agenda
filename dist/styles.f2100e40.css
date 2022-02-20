@@ -3,3 +3,8 @@
     left: 60px;
     color: blue;
 }
+
+.btn-tarefa {
+    background-color: green;
+    width: 200px;
+}

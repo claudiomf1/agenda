@@ -124,7 +124,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-document.addEventListener("DOMContentLoaded", function () {});
+//document.addEventListener("DOMContentLoaded", function() {})
 var inputTarefa = document.querySelector('.input-tarefa');
 var btnTarefa = document.querySelector('.btn-tarefa');
 var tarefas = document.querySelector('.tarefas');
@@ -154,7 +154,6 @@ function criaBotaoApagar(li) {
   botaoApagar.innerText = 'Apagar';
   botaoApagar.setAttribute('class', 'apagar');
   botaoApagar.setAttribute('title', 'Apagar esta tarefa');
-  botaoApagar.style.border = "10px";
   li.appendChild(botaoApagar);
 }
 
