@@ -3,41 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>.apagar {
-    position: relative;
-    left: 10px;
-    font-size: 0.8em;
-}
-
-.btn-tarefa {
-    background-color: rgb(128, 98, 0);
-    color: white;
-    font-size: 1.5em;
-}
-
-.input-tarefa {
-    font-size: 1.5em;
-}
-
-.li {
-    font-size: 1.6em;
-}</style>
+    <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/solid.js" integrity="sha384-IWq2srnodX6Z+US+NFdwALHXDvdogKkBx7sUMzfypASSeqsNzF+gAS48WnkPcYbf" crossorigin="anonymous"></script>
+<script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/fontawesome.js" integrity="sha384-pULjvYk4ZbCHxvgkOUhY3s6wbSkRp/9WHqh+NdM+FkmDQsdJeg2XyOHSEQ0AZlr4" crossorigin="anonymous"></script>
+    <style></style>
 </head>
 
 <body>
 
-    <section class="container">
-
-        <h1 class="corpo">Lista de tarefas</h1>
-        <p>
-            <input type="text" class="input-tarefa">
-            <button class="btn-tarefa">Adicionar tarefa</button>
-        </p>
-        <ul class="tarefas"></ul>
-    </section>
+    
+    
     <script>// modules are defined as an array
 // [ module function, map of requires ]
 //
@@ -158,113 +136,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"d6sW":[function(require,module,exports) {
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 //document.addEventListener("DOMContentLoaded", function() {})
-var inputTarefa = document.querySelector('.input-tarefa');
-var btnTarefa = document.querySelector('.btn-tarefa');
-var tarefas = document.querySelector('.tarefas');
-
-function criaLi() {
-  var li = document.createElement('li');
-  li.setAttribute('class', 'li');
-  return li;
-}
-
-function teclaKeyPress(e) {
-  var tecla = e.keyCode;
-
-  if (tecla === 13) {
-    if (!inputTarefa.value) return;
-    criaTarefa(inputTarefa.value);
-  }
-}
-
-function limpaInput() {
-  inputTarefa.value = '';
-  inputTarefa.focus();
-}
-
-inputTarefa.addEventListener('keypress', teclaKeyPress);
-
-function criaBotaoApagar(li) {
-  var botaoApagar = document.createElement('button');
-  botaoApagar.innerText = 'Apagar';
-  botaoApagar.setAttribute('class', 'apagar');
-  botaoApagar.setAttribute('title', 'Apagar esta tarefa');
-  li.appendChild(botaoApagar);
-}
-
-function criaTarefa(textoInput) {
-  var li = criaLi();
-  li.innerText = textoInput;
-  tarefas.appendChild(li);
-  limpaInput();
-  criaBotaoApagar(li);
-  SalvarTarefas();
-}
-
-btnTarefa.addEventListener('click', function () {
-  if (!inputTarefa.value) return;
-  criaTarefa(inputTarefa.value);
-});
-document.addEventListener('click', function (e) {
-  var el = e.target;
-
-  if (el.classList.contains('apagar')) {
-    el.parentElement.remove();
-    SalvarTarefas();
-  }
-});
-
-function SalvarTarefas() {
-  var liTarefas = tarefas.querySelectorAll('li');
-  var listaDeTarefas = [];
-
-  var _iterator = _createForOfIteratorHelper(liTarefas),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var tarefa = _step.value;
-      var tarefaTexto = tarefa.innerText;
-      tarefaTexto = tarefaTexto.replace('Apagar', '').trim();
-      listaDeTarefas.push(tarefaTexto);
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-
-  var tarefasJSON = JSON.stringify(listaDeTarefas);
-  localStorage.setItem('tarefas', tarefasJSON);
-}
-
-function adicionaTarefasSalvas() {
-  var tarefs = localStorage.getItem('tarefas');
-  var listaDeTarefas = JSON.parse(tarefs);
-
-  var _iterator2 = _createForOfIteratorHelper(listaDeTarefas),
-      _step2;
-
-  try {
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var tarefa = _step2.value;
-      criaTarefa(tarefa);
-    }
-  } catch (err) {
-    _iterator2.e(err);
-  } finally {
-    _iterator2.f();
-  }
-}
-
-adicionaTarefasSalvas();
 },{}]},{},["d6sW"], null)</script>
 </body>
 

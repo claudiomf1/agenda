@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/solid.js" integrity="sha384-IWq2srnodX6Z+US+NFdwALHXDvdogKkBx7sUMzfypASSeqsNzF+gAS48WnkPcYbf" crossorigin="anonymous"></script>
-<script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/fontawesome.js" integrity="sha384-pULjvYk4ZbCHxvgkOUhY3s6wbSkRp/9WHqh+NdM+FkmDQsdJeg2XyOHSEQ0AZlr4" crossorigin="anonymous"></script>
-    <style></style>
-</head>
-
-<body>
-
-    
-    
-    <script>// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -137,7 +119,4 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"d6sW":[function(require,module,exports) {
 //document.addEventListener("DOMContentLoaded", function() {})
-},{}]},{},["d6sW"], null)</script>
-</body>
-
-</html>
+},{}]},{},["d6sW"], null)

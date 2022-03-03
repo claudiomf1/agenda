@@ -1,10 +1,11 @@
 {
     "devDependencies": {
-        "nodemon": "^2.0.15"
+        "nodemon": "^2.0.15",
+        "parcel-bundler": "^1.12.5",
+        "parcel-plugin-inliner": "^1.0.16"
     },
     "dependencies": {
         "@types/google-apps-script": "^1.0.45",
-        "parcel-plugin-inliner": "^1.0.16",
         "posthtml": "^0.16.5"
     },
     "scripts": {
