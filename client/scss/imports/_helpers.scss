@@ -8,12 +8,17 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Rubik', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 */
+
 :root {
+  
+    --primary-color: #FF6380;
+    --white-color: #fff;
+    --cyan-color: #665F5E;
+    --solid-border: #ccc; 
+    --slate-grey: #708090;
+    --red: rgba(224, 60, 10, 0.911);
+    --green: #006400;
+}
 
-  --white: #FFF;
-  --black: rgb(18,18,20);
 
-  }
-
-
-  /* classes gerais */
+/* classes gerais */

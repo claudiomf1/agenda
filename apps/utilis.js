@@ -1,10 +1,7 @@
-function include(callsrc){
-  return HtmlService.createHtmlOutputFromFile(callsrc).getContent()
-    }
- 
-      
+
+     
 function render(file, argoObject) {
-  var template = HtmlService.createTemplateFromFile(file); //chama o html para o doGet
+  var template = HtmlService.createTemplateFromFile(file); 
   if (argoObject) {
       var keys = Object.keys(argoObject);
 
@@ -12,5 +9,8 @@ function render(file, argoObject) {
           template[key] = argoObject[key];
       });
   } //end if
-  return template.evaluate().setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL); // retorna os valores para o html
+  return template.evaluate().setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
+   //.addMetaTag('viewport', 'width=device-width, initial-scale=1')
+   .setTitle("Modelagem- Home")
+   .setFaviconUrl('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Paris_RER_D_icon.svg/512px-Paris_RER_D_icon.svg.png')
 }
