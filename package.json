@@ -10,7 +10,7 @@
         "posthtml": "^0.16.5"
     },
     "scripts": {
-        "run": "parcel build assets/index.html --no-minify --no-cache --no-source-maps && node util.js && clasp push && xdg-open https://script.google.com/macros/s/1UXDFEQp5Xoirpj5Dvln_Pk0WAX_NZ8d_XppDCV_3cgsFODUkJ1uCo_fz/",
-        "watch": "nodemon --watch assets --watch server --exec \"npm run run\" --ext js,html,scss,css"
+        "run": "parcel build client/index.html --no-minify --no-cache --no-source-maps && node util.js && clasp push && xdg-open https://script.google.com/macros/s/1UXDFEQp5Xoirpj5Dvln_Pk0WAX_NZ8d_XppDCV_3cgsFODUkJ1uCo_fz/",
+        "watch": "nodemon --watch client --watch server --exec \"npm run run\" --ext js,html,scss,css"
     }
 }
