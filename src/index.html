@@ -309,11 +309,164 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"d6sW":[function(require,module,exports) {
+})({"jMUm":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.LoadInit = exports.LoadHprincipal = exports.LoadHeard = exports.LoadFooter = void 0;
+
+var LoadInit = function LoadInit(options) {
+  var id = typeof options.id === "undefined" ? "body-home" : options.id;
+  var cb = typeof options.callback === "undefined" ? function () {} : options.callback;
+  google.script.run.withSuccessHandler(function (html) {
+    document.getElementById(id).innerHTML = html;
+    typeof options.params == "undefined" ? cb() : cb(options.params);
+  })[options.func]();
+};
+
+exports.LoadInit = LoadInit;
+
+var LoadHeard = function LoadHeard(options) {
+  var id = typeof options.id === "undefined" ? "heard-index" : options.id;
+  var cb = typeof options.callback === "undefined" ? function () {} : options.callback;
+  google.script.run.withSuccessHandler(function (html) {
+    document.getElementById(id).innerHTML = html;
+    typeof options.params == "undefined" ? cb() : cb(options.params);
+  })[options.func]();
+};
+
+exports.LoadHeard = LoadHeard;
+
+var LoadFooter = function LoadFooter(options) {
+  var id = typeof options.id === "undefined" ? "footer-index" : options.id;
+  var cb = typeof options.callback === "undefined" ? function () {} : options.callback;
+  google.script.run.withSuccessHandler(function (html) {
+    document.getElementById(id).innerHTML = html;
+    typeof options.params == "undefined" ? cb() : cb(options.params);
+  })[options.func]();
+};
+
+exports.LoadFooter = LoadFooter;
+
+var LoadHprincipal = function LoadHprincipal(options) {
+  var id = typeof options.id === "undefined" ? "header-principal" : options.id;
+  var cb = typeof options.callback === "undefined" ? function () {} : options.callback;
+  google.script.run.withSuccessHandler(function (html) {
+    document.getElementById(id).innerHTML = html;
+    typeof options.params == "undefined" ? cb() : cb(options.params);
+  })[options.func]();
+};
+
+exports.LoadHprincipal = LoadHprincipal;
+},{}],"CwAk":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.callnewPedido = exports.callRegisterList = exports.callRegisterI = exports.callPedido = exports.callManutencao = exports.callLogin = exports.callHprincipal = exports.callHearder = exports.callCdUser = exports.callBody = void 0;
+
+var _pages = require("./pages/pages");
+
+var callHearder = function callHearder() {
+  (0, _pages.LoadHeard)({
+    func: "LoadHearders"
+  });
+};
+
+exports.callHearder = callHearder;
+
+var callBody = function callBody() {
+  (0, _pages.LoadInit)({
+    func: "loadBody"
+  });
+};
+
+exports.callBody = callBody;
+
+var callLogin = function callLogin() {
+  (0, _pages.LoadInit)({
+    func: "loadLogin"
+  });
+  $("#body-init").hide();
+};
+
+exports.callLogin = callLogin;
+
+var callHprincipal = function callHprincipal() {
+  (0, _pages.LoadHeard)({
+    func: "loadHeaderAdmin",
+    callback: cPrincipal()
+  });
+};
+
+exports.callHprincipal = callHprincipal;
+
+var callManutencao = function callManutencao() {
+  (0, _pages.LoadInit)({
+    func: "loadManutencao"
+  });
+};
+
+exports.callManutencao = callManutencao;
+
+var callRegisterList = function callRegisterList() {
+  (0, _pages.LoadInit)({
+    func: "loadListCadastro",
+    callback: setDataForSearchCd()
+  });
+};
+
+exports.callRegisterList = callRegisterList;
+
+var callRegisterI = function callRegisterI() {
+  (0, _pages.LoadInit)({
+    func: "loadCadastro"
+  });
+};
+
+exports.callRegisterI = callRegisterI;
+
+var callCdUser = function callCdUser() {
+  (0, _pages.LoadInit)({
+    func: "loadUser",
+    callback: cmbUSer()
+  });
+};
+
+exports.callCdUser = callCdUser;
+
+var callPedido = function callPedido() {
+  (0, _pages.LoadInit)({
+    func: "loadPedido",
+    callback: setDataForSearchPe()
+  });
+};
+
+exports.callPedido = callPedido;
+
+var callnewPedido = function callnewPedido() {
+  (0, _pages.LoadInit)({
+    func: "loadnewPedido",
+    callback: initPedido()
+  });
+};
+
+exports.callnewPedido = callnewPedido;
+},{"./pages/pages":"jMUm"}],"d6sW":[function(require,module,exports) {
+"use strict";
+
+var _caldpages = require("./caldpages");
+
 document.addEventListener("DOMContentLoaded", function () {});
 
-window.onload = function () {};
-},{}]},{},["d6sW"], null)</script>
+window.onload = function () {
+  (0, _caldpages.callHearder)();
+  (0, _caldpages.callBody)();
+};
+},{"./caldpages":"CwAk"}]},{},["d6sW"], null)</script>
 
 </body>
 

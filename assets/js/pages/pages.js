@@ -25,3 +25,31 @@ export const LoadHeard =(options) => {
       })
       [options.func]();
 }
+
+export const LoadFooter = (options) => {
+  var id = typeof options.id === "undefined" ? "footer-index" : options.id;
+  var cb =
+      typeof options.callback === "undefined"
+          ? function () {}
+          : options.callback;
+  google.script.run
+      .withSuccessHandler(function (html) {
+          document.getElementById(id).innerHTML = html;
+          typeof options.params == "undefined" ? cb() : cb(options.params);
+      })
+      [options.func]();
+}
+
+export const LoadHprincipal = (options) => {
+  var id = typeof options.id === "undefined" ? "header-principal" : options.id;
+  var cb =
+      typeof options.callback === "undefined"
+          ? function () {}
+          : options.callback;
+  google.script.run
+      .withSuccessHandler(function (html) {
+          document.getElementById(id).innerHTML = html;
+          typeof options.params == "undefined" ? cb() : cb(options.params);
+      })
+      [options.func]();
+}

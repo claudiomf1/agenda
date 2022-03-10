@@ -1,3 +1,11 @@
 node_modules
 dist
+<<<<<<< HEAD
 teste.js
+=======
+<<<<<<< HEAD
+teste.js
+=======
+./server/model
+>>>>>>> 947d73ae3c23b689428edcc6bf01ceeda8f5ac28
+>>>>>>> main

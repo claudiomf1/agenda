@@ -1,3 +1,4 @@
+
 const fs = require("fs")
 const { dirname } = require("path")
 const path = require("path")
@@ -10,3 +11,5 @@ const dir = fs.readdirSync(path.resolve(__dirname, servDir));
 dir.forEach(f => {
     fs.copyFileSync(path.resolve(__dirname, servDir, f), path.resolve(__dirname, finalDir, f))
 })
+
+
