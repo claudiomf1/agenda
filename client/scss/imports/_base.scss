@@ -82,3 +82,152 @@ body, input, textarea, select, button{
     right:-8%;
   }
 }
+
+/*class gerais*/
+
+.header-g{
+  /*background-color:  var(--primary-color);*/
+  padding: 0,9rem;
+  color: var(--cyan-color);
+  text-align: center;
+}
+
+.card{
+  background-color: var(--white-color);
+  border: 1px solid var(--solid-border);
+  padding: 1.2rem;
+  margin-top: 0.95rem;
+  border-radius: 5px;
+
+}
+
+/*visualizações*/
+#cmb-sexo{
+  display: none;
+}
+#cmb-categoria{
+  display: none;
+}
+
+
+/*bg*/
+
+.bg-cyan{
+  background: var(--slate-grey);
+}
+
+
+
+/*padding outors*/
+.center{
+  text-align: center;
+}
+.padding-32{
+  padding: 2rem;
+}
+.padding-16{
+  padding: 1rem;
+}
+.padding-22{
+  padding: 1.4rem;
+}
+.padding-5{
+  padding: 0.5rem;
+}
+/*margin top*/
+
+.mag-top-5 {
+  margin-top: 0.5rem;
+}
+ 
+.mag-top-8 {
+  margin-top: 0.9rem;
+}
+.mag-top-16{
+  margin-top: 1rem;
+}
+
+.mag-top-20{
+  margin-top: 1.4rem;
+}
+
+.mag-top-22{
+  margin-top: 2rem;
+}
+.mag-top-25{
+  margin-top: 2.5rem;
+}
+.mag-top-30{
+  margin-top: 3rem;
+}
+.bord-radius-5-cima{
+  border-radius: 4px 4px 0px 0px;
+}
+.bord-radius-5-baixo{
+  border-radius: 0px 0px 4px 4px;
+}
+/*text*/
+
+.text-aling{
+  text-align: center;
+}
+.text-bold{
+  font-weight: bold;
+}
+.color-white{
+  color: var(--white-color);
+}
+/*grid pedidos*/
+.c-grind-pedido{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 5vh 25vh 28vh;
+  grid-template-areas: "h h"
+                        "b v"
+                        "i v";
+}
+.card-div-1{
+grid-area: h;
+}
+.card-div-2{
+grid-area: b;
+}
+.card-div-3{
+grid-area: v;
+}
+.card-div-4{
+grid-area: i;
+}
+
+.grid-valores-p{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 8vh 8vh 8vh 8vh 10vh;
+  grid-template-areas: "s s"
+                       "d d"
+                       "vd vd"
+                       "td td"
+                       "tl tl";
+}
+
+.sub-t{
+grid-area: s;
+}
+.desc-t{
+grid-area: d;
+}
+.v-desc-t{
+grid-area: vd;
+}
+.transp-t{
+grid-area: td;
+}
+.total-t{
+grid-area: tl;
+}
+
+.bord-remove{
+
+  border: none;
+}
+
