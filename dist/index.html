@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/solid.js" integrity="sha384-IWq2srnodX6Z+US+NFdwALHXDvdogKkBx7sUMzfypASSeqsNzF+gAS48WnkPcYbf" crossorigin="anonymous"></script>
 <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/fontawesome.js" integrity="sha384-pULjvYk4ZbCHxvgkOUhY3s6wbSkRp/9WHqh+NdM+FkmDQsdJeg2XyOHSEQ0AZlr4" crossorigin="anonymous"></script>
-    <style>@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
+    <style>@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -146,6 +147,162 @@ body, input, textarea, select, button {
     right: -8%;
   }
 }
+/*class gerais*/
+.header-g {
+  /*background-color:  var(--primary-color);*/
+  padding: 0, 9rem;
+  color: var(--cyan-color);
+  text-align: center;
+}
+
+.card {
+  background-color: var(--white-color);
+  border: 1px solid var(--solid-border);
+  padding: 1.2rem;
+  margin-top: 0.95rem;
+  border-radius: 5px;
+}
+
+/*visualizações*/
+#cmb-sexo {
+  display: none;
+}
+
+#cmb-categoria {
+  display: none;
+}
+
+/*bg*/
+.bg-cyan {
+  background: var(--slate-grey);
+}
+
+/*padding outors*/
+.center {
+  text-align: center;
+}
+
+.padding-32 {
+  padding: 2rem;
+}
+
+.padding-16 {
+  padding: 1rem;
+}
+
+.padding-22 {
+  padding: 1.4rem;
+}
+
+.padding-5 {
+  padding: 0.5rem;
+}
+
+/*margin top*/
+.mag-top-5 {
+  margin-top: 0.5rem;
+}
+
+.mag-top-8 {
+  margin-top: 0.9rem;
+}
+
+.mag-top-16 {
+  margin-top: 1rem;
+}
+
+.mag-top-20 {
+  margin-top: 1.4rem;
+}
+
+.mag-top-22 {
+  margin-top: 2rem;
+}
+
+.mag-top-25 {
+  margin-top: 2.5rem;
+}
+
+.mag-top-30 {
+  margin-top: 3rem;
+}
+
+.bord-radius-5-cima {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.bord-radius-5-baixo {
+  border-radius: 0px 0px 4px 4px;
+}
+
+/*text*/
+.text-aling {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.color-white {
+  color: var(--white-color);
+}
+
+/*grid pedidos*/
+.c-grind-pedido {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 5vh 25vh 28vh;
+  grid-template-areas: "h h" "b v" "i v";
+}
+
+.card-div-1 {
+  grid-area: h;
+}
+
+.card-div-2 {
+  grid-area: b;
+}
+
+.card-div-3 {
+  grid-area: v;
+}
+
+.card-div-4 {
+  grid-area: i;
+}
+
+.grid-valores-p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 8vh 8vh 8vh 8vh 10vh;
+  grid-template-areas: "s s" "d d" "vd vd" "td td" "tl tl";
+}
+
+.sub-t {
+  grid-area: s;
+}
+
+.desc-t {
+  grid-area: d;
+}
+
+.v-desc-t {
+  grid-area: vd;
+}
+
+.transp-t {
+  grid-area: td;
+}
+
+.total-t {
+  grid-area: tl;
+}
+
+.bord-remove {
+  border: none;
+}
+
 /* uso de fonts: 
 font-family: 'Abril Fatface', cursive;
 font-family: 'Lato', sans-serif;
@@ -455,18 +612,88 @@ var callnewPedido = function callnewPedido() {
 };
 
 exports.callnewPedido = callnewPedido;
-},{"./pages/pages":"jMUm"}],"d6sW":[function(require,module,exports) {
+},{"./pages/pages":"jMUm"}],"GeCc":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.loginAut = void 0;
+
+var loginAut = function loginAut() {
+  $("#bar").show();
+  var inputNome = document.getElementById("username");
+  var inputPswd = document.getElementById("password");
+  var inputs = {
+    users: inputNome.value,
+    paswds: inputPswd.value
+  };
+  google.script.run.withSuccessHandler(lookLogin).loginSv(inputs);
+};
+
+exports.loginAut = loginAut;
+
+function lookLogin(options) {
+  var mensagemL = document.getElementById("msn-login");
+  var optRet = options.userRetL;
+  var iduser = options.userId;
+  var nomeUser = options.userName;
+  var userEmail = options.userEmail;
+  var userPremissao = options.userPermissao;
+  var token = options.tokenServ;
+  var pp = options.pp;
+  console.log(optRet, pp);
+
+  if (optRet === pp) {
+    localStorage.setItem("token", token);
+    localStorage.setItem('nomeuser', nomeUser);
+    localStorage.setItem('iduser', iduser);
+    localStorage.setItem('email', userEmail);
+    localStorage.setItem('permissao', userPremissao);
+    callManutencao();
+    callHprincipal();
+    $("#bar").hide();
+  } else {
+    $(mensagemL).html("Usuário ou senha invalidos.");
+    $("#bar").hide();
+  }
+}
+},{}],"d6sW":[function(require,module,exports) {
 "use strict";
 
 var _caldpages = require("./caldpages");
 
-document.addEventListener("DOMContentLoaded", function () {});
+var _login_client = require("./scripts/login_client");
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("body-home").addEventListener('click', _login_client.btnClick);
+  document.getElementById("body-home").addEventListener("input", btnInput);
+  document.getElementById("body-home").addEventListener("change", btnChange);
+  $("#bar").hide();
+  $("#title-page").html("Home MC");
+  $("#buttons-pedido").hide();
+});
 
 window.onload = function () {
   (0, _caldpages.callHearder)();
   (0, _caldpages.callBody)();
 };
-},{"./caldpages":"CwAk"}]},{},["d6sW"], null)</script>
+
+var masks = {
+  cpf: function cpf(value) {
+    return value.replace(/\D/g, '').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})/, '$1-$2').replace(/(-\d{2})\d+?/, '$1');
+  },
+  cnpj: function cnpj(value) {
+    return value.replace(/\D/g, '').replace(/(\d{2})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1/$2').replace(/(\d{4})(\d)/, '$1-$2').replace(/(-\d{2})\d+?/, '$1');
+  },
+  phone: function phone(value) {
+    return value.replace(/\D/g, '').replace(/(\d{2})(\d)/, '($1) $2').replace(/(\d{4})(\d)/, '$1-$2').replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3').replace(/(-\d{4})\d+?/, '$1');
+  },
+  cep: function cep(value) {
+    return value.replace(/\D/g, '').replace(/(\d{5})(\d)/, '$1-$2').replace(/(-\d{3})\d+?/, '$1');
+  }
+};
+},{"./caldpages":"CwAk","./scripts/login_client":"GeCc"}]},{},["d6sW"], null)</script>
 </body>
 
 </html>
