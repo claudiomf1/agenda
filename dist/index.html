@@ -613,51 +613,7 @@ var callnewPedido = function callnewPedido() {
 
 exports.callnewPedido = callnewPedido;
 },{"./pages/pages":"jMUm"}],"GeCc":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.loginAut = void 0;
-
-var loginAut = function loginAut() {
-  $("#bar").show();
-  var inputNome = document.getElementById("username");
-  var inputPswd = document.getElementById("password");
-  var inputs = {
-    users: inputNome.value,
-    paswds: inputPswd.value
-  };
-  google.script.run.withSuccessHandler(lookLogin).loginSv(inputs);
-};
-
-exports.loginAut = loginAut;
-
-function lookLogin(options) {
-  var mensagemL = document.getElementById("msn-login");
-  var optRet = options.userRetL;
-  var iduser = options.userId;
-  var nomeUser = options.userName;
-  var userEmail = options.userEmail;
-  var userPremissao = options.userPermissao;
-  var token = options.tokenServ;
-  var pp = options.pp;
-  console.log(optRet, pp);
-
-  if (optRet === pp) {
-    localStorage.setItem("token", token);
-    localStorage.setItem('nomeuser', nomeUser);
-    localStorage.setItem('iduser', iduser);
-    localStorage.setItem('email', userEmail);
-    localStorage.setItem('permissao', userPremissao);
-    callManutencao();
-    callHprincipal();
-    $("#bar").hide();
-  } else {
-    $(mensagemL).html("Usuário ou senha invalidos.");
-    $("#bar").hide();
-  }
-}
 },{}],"d6sW":[function(require,module,exports) {
 "use strict";
 
@@ -693,6 +649,43 @@ var masks = {
     return value.replace(/\D/g, '').replace(/(\d{5})(\d)/, '$1-$2').replace(/(-\d{3})\d+?/, '$1');
   }
 };
+
+var loginAut = function loginAut() {
+  $("#bar").show();
+  var inputNome = document.getElementById("username");
+  var inputPswd = document.getElementById("password");
+  var inputs = {
+    users: inputNome.value,
+    paswds: inputPswd.value
+  };
+  google.script.run.withSuccessHandler(lookLogin).loginSv(inputs);
+};
+
+function lookLogin(options) {
+  var mensagemL = document.getElementById("msn-login");
+  var optRet = options.userRetL;
+  var iduser = options.userId;
+  var nomeUser = options.userName;
+  var userEmail = options.userEmail;
+  var userPremissao = options.userPermissao;
+  var token = options.tokenServ;
+  var pp = options.pp;
+  console.log(optRet, pp);
+
+  if (optRet === pp) {
+    localStorage.setItem("token", token);
+    localStorage.setItem('nomeuser', nomeUser);
+    localStorage.setItem('iduser', iduser);
+    localStorage.setItem('email', userEmail);
+    localStorage.setItem('permissao', userPremissao);
+    (0, _caldpages.callManutencao)();
+    (0, _caldpages.callHprincipal)();
+    $("#bar").hide();
+  } else {
+    $(mensagemL).html("Usuário ou senha invalidos.");
+    $("#bar").hide();
+  }
+}
 },{"./caldpages":"CwAk","./scripts/login_client":"GeCc"}]},{},["d6sW"], null)</script>
 
 </body>
