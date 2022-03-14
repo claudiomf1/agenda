@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/solid.js" integrity="sha384-IWq2srnodX6Z+US+NFdwALHXDvdogKkBx7sUMzfypASSeqsNzF+gAS48WnkPcYbf" crossorigin="anonymous"></script>
 <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/fontawesome.js" integrity="sha384-pULjvYk4ZbCHxvgkOUhY3s6wbSkRp/9WHqh+NdM+FkmDQsdJeg2XyOHSEQ0AZlr4" crossorigin="anonymous"></script>
-    <style>@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
+    <style>@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -147,162 +146,1006 @@ body, input, textarea, select, button {
     right: -8%;
   }
 }
-/*class gerais*/
-.header-g {
-  /*background-color:  var(--primary-color);*/
-  padding: 0, 9rem;
-  color: var(--cyan-color);
-  text-align: center;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+#nav-dots,
+section,
+summary {
+  display: block;
 }
 
-.card {
-  background-color: var(--white-color);
-  border: 1px solid var(--solid-border);
-  padding: 1.2rem;
-  margin-top: 0.95rem;
-  border-radius: 5px;
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
 }
 
-/*visualizações*/
-#cmb-sexo {
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
   display: none;
 }
 
-#cmb-categoria {
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+body {
+  font: 16px/1.5 "Raleway", Helvetica, Helvetica Neue, Arial, sans-serif;
+  background-color: #212121;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 10%;
+}
+
+/* Make the body 100% of the browser viewport height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+  font-family: "Roboto Condensed", Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* =Preloader */
+#preloader {
   display: none;
 }
 
-/*bg*/
-.bg-cyan {
-  background: var(--slate-grey);
+#preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: #212121;
+  color: #ffffff;
 }
 
-/*padding outors*/
-.center {
+#preloader .txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#preloader .txt-perc {
+  font-size: 35px;
+  font-family: "Roboto Condensed", Helvetica, Helvetica Neue, Arial, sans-serif;
+  opacity: 1;
+  margin: 0 0 6px 0;
+  max-width: 400px;
   text-align: center;
 }
 
-.padding-32 {
-  padding: 2rem;
+#preloader .progress {
+  width: 100px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 auto 15px auto;
 }
 
-.padding-16 {
-  padding: 1rem;
+#preloader .progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.padding-22 {
-  padding: 1.4rem;
+#preloader.is-hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
-.padding-5 {
-  padding: 0.5rem;
+.is-loading {
+  overflow: hidden;
 }
 
-/*margin top*/
-.mag-top-5 {
-  margin-top: 0.5rem;
-}
-
-.mag-top-8 {
-  margin-top: 0.9rem;
-}
-
-.mag-top-16 {
-  margin-top: 1rem;
-}
-
-.mag-top-20 {
-  margin-top: 1.4rem;
-}
-
-.mag-top-22 {
-  margin-top: 2rem;
-}
-
-.mag-top-25 {
-  margin-top: 2.5rem;
-}
-
-.mag-top-30 {
-  margin-top: 3rem;
-}
-
-.bord-radius-5-cima {
-  border-radius: 4px 4px 0px 0px;
-}
-
-.bord-radius-5-baixo {
-  border-radius: 0px 0px 4px 4px;
-}
-
-/*text*/
-.text-aling {
+/* =Header */
+.header-container {
   text-align: center;
+  color: #ffffff;
 }
 
-.text-bold {
+.header-container .wrapper {
+  padding-top: 120px;
+  z-index: 2;
+  position: relative;
+}
+
+.header-container .bcg {
+  -webkit-transition: -webkit-transform 4s ease-out;
+  transition: transform 4s ease-out;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.header-container.is-loaded .bcg {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.bcg {
+  background: no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.header-container .bcg {
+  background-image: url(https://ihatetomatoes.net/demos/scrollmagic-templates/scrollmagic-template-04/img/img_mountains01.jpg);
+  background-size: cover;
+}
+
+#slide01 .bcg {
+  background: url(https://ihatetomatoes.net/demos/scrollmagic-templates/scrollmagic-template-04/img/img_mountains02.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#slide02 .bcg {
+  background: url(https://ihatetomatoes.net/demos/scrollmagic-templates/scrollmagic-template-04/img/img_mountains03.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#slide03 .bcg {
+  background: url(https://ihatetomatoes.net/demos/scrollmagic-templates/scrollmagic-template-04/img/img_mountains04.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+/* =Navigation */
+ul.horizontal-nav {
+  position: fixed;
+  left: 0;
+  top: 5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 100;
+}
+
+.horizontal-nav a {
+  display: block;
+  line-height: 25px;
+  position: relative;
+  padding-right: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.horizontal-nav a:hover {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.horizontal-nav .nav-horizontal {
+  display: block;
+  width: auto;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.horizontal-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-nav li {
+  width: auto;
+  list-style: none;
+  display: inline-block;
+}
+
+/* =Navigation Dots */
+#nav-dots {
+  display: none;
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: right;
+  z-index: 100;
+}
+
+#nav-dots a {
+  display: block;
+  line-height: 25px;
+  position: relative;
+  padding-right: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#nav-dots a:hover .nav-label {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+#nav-dots .nav-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+#nav-dots .nav-label {
+  display: block;
+  opacity: 0.5;
+  visibility: hidden;
+  -webkit-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  -webkit-transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+#nav-dots.is-dark a {
+  color: #212121;
+}
+
+#nav-dots.is-dark .nav-dot {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#nav-dots.is-light a {
+  color: #ffffff;
+}
+
+#nav-dots.is-light .nav-dot {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#nav-dots ul {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-dots li {
+  width: auto;
+  list-style: none;
+}
+
+.scroll-hint {
+  color: #212121;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 10px 40px;
+  border: 3px #ffffff solid;
+  font-size: 13px;
   font-weight: bold;
+  font-family: "Roboto Condensed", Helvetica, Helvetica Neue, Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
 }
 
-.color-white {
-  color: var(--white-color);
+/* =Main */
+p {
+  font-size: 16px;
 }
 
-/*grid pedidos*/
-.c-grind-pedido {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 5vh 25vh 28vh;
-  grid-template-areas: "h h" "b v" "i v";
+.fs {
+  height: 100vh;
 }
 
-.card-div-1 {
-  grid-area: h;
+.slide {
+  color: #ffffff;
+  position: relative;
 }
 
-.card-div-2 {
-  grid-area: b;
+.slide .wrapper {
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.card-div-3 {
-  grid-area: v;
+.slide#slide01 .wrapper {
+  position: absolute;
+  top: 10%;
 }
 
-.card-div-4 {
-  grid-area: i;
+.slide#slide02 .wrapper {
+  position: absolute;
+  bottom: 10%;
 }
 
-.grid-valores-p {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 8vh 8vh 8vh 8vh 10vh;
-  grid-template-areas: "s s" "d d" "vd vd" "td td" "tl tl";
+.slide#slide03 .button {
+  border-color: #ffffff;
+  color: #212121;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.sub-t {
-  grid-area: s;
+.slide#slide03 .button:hover {
+  border-color: #212121;
+  background-color: #212121;
+  color: #ffffff;
 }
 
-.desc-t {
-  grid-area: d;
+.slide#slide03 .wrapper {
+  padding-top: 100px;
 }
 
-.v-desc-t {
-  grid-area: vd;
+.slide#slide04 {
+  background-color: #be4c2c;
 }
 
-.transp-t {
-  grid-area: td;
+.button {
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px rgba(255, 255, 255, 0.7) solid;
+  padding: 8px 15px;
+  margin-top: 15px;
+  display: inline-block;
+  position: relative;
 }
 
-.total-t {
-  grid-area: tl;
+.button:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.bord-remove {
-  border: none;
+/* =Content Block */
+.content-block {
+  background-color: #212121;
+  color: rgba(255, 255, 255, 0.9);
 }
 
+.content-block .wrapper {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.no-touch .content-block .wrapper {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.no-touch .content-block.is-active .wrapper {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* =Footer */
+.footer-container {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #06060d;
+}
+
+.footer-container h3 {
+  margin: 0;
+  padding: 20px 0;
+  font-weight: normal;
+}
+
+.footer-container a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =Simple animation up */
+.no-touch .slideInUp {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+}
+
+.no-touch .is-active .slideInUp {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slideInUp.slideInUp2 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.slideInUp.slideInUp3 {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+#iht_logo {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 768px) {
+  body {
+    font-weight: 100;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  /* =Header */
+  .header-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .header-container .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -120%);
+    -ms-transform: translate(-50%, -120%);
+    transform: translate(-50%, -120%);
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-container:before {
+    font-size: 70em;
+  }
+
+  .scroll-hint {
+    font-size: 20px;
+  }
+
+  .bcg {
+    opacity: 1;
+  }
+
+  .slide {
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+
+  .slide section {
+    max-width: 400px;
+  }
+
+  .slide .wrapper {
+    padding-top: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  .slide#slide01,
+.slide#slide02,
+.slide#slide03 {
+    color: #212121;
+  }
+
+  .slide#slide01 .wrapper,
+.slide#slide02 .wrapper,
+.slide#slide03 .wrapper {
+    top: 20%;
+    text-align: center;
+  }
+
+  .slide#slide01 section,
+.slide#slide02 section,
+.slide#slide03 section {
+    margin: 0 auto;
+  }
+
+  .slide#slide02 {
+    color: #ffffff;
+  }
+
+  .slide#slide02 .wrapper {
+    top: auto;
+    bottom: 40%;
+    left: 10%;
+    text-align: left;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+    padding: 0;
+  }
+
+  .slide#slide02 section {
+    margin: 0;
+  }
+
+  .slide#slide03 .wrapper {
+    padding: 0;
+    top: 15%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+
+  .slide#slide03 section {
+    margin: 0 auto;
+    max-width: 570px;
+  }
+
+  .slide#slide03 .button {
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: transparent;
+    color: #212121;
+  }
+
+  .slide#slide03 .bcg {
+    opacity: 1;
+  }
+
+  #nav-dots {
+    display: block;
+  }
+
+  .content-block .wrapper {
+    padding: 120px 0;
+  }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  *,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+h3 {
+    page-break-after: avoid;
+  }
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+h3 {
+    page-break-after: avoid;
+  }
+}
 /* uso de fonts: 
 font-family: 'Abril Fatface', cursive;
 font-family: 'Lato', sans-serif;
@@ -472,7 +1315,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.LoadInit = exports.LoadHprincipal = exports.LoadHeard = exports.LoadFooter = void 0;
+exports.LoadInit = exports.LoadHeard = exports.LoadFooter = void 0;
 
 var LoadInit = function LoadInit(options) {
   var id = typeof options.id === "undefined" ? "body-home" : options.id;
@@ -506,24 +1349,13 @@ var LoadFooter = function LoadFooter(options) {
 };
 
 exports.LoadFooter = LoadFooter;
-
-var LoadHprincipal = function LoadHprincipal(options) {
-  var id = typeof options.id === "undefined" ? "header-principal" : options.id;
-  var cb = typeof options.callback === "undefined" ? function () {} : options.callback;
-  google.script.run.withSuccessHandler(function (html) {
-    document.getElementById(id).innerHTML = html;
-    typeof options.params == "undefined" ? cb() : cb(options.params);
-  })[options.func]();
-};
-
-exports.LoadHprincipal = LoadHprincipal;
 },{}],"CwAk":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.callnewPedido = exports.callRegisterList = exports.callRegisterI = exports.callPedido = exports.callManutencao = exports.callLogin = exports.callHprincipal = exports.callHearder = exports.callCdUser = exports.callBody = void 0;
+exports.callHearder = exports.callBody = void 0;
 
 var _pages = require("./pages/pages");
 
@@ -542,158 +1374,217 @@ var callBody = function callBody() {
 };
 
 exports.callBody = callBody;
-
-var callLogin = function callLogin() {
-  (0, _pages.LoadInit)({
-    func: "loadLogin"
-  });
-  $("#body-init").hide();
-};
-
-exports.callLogin = callLogin;
-
-var callHprincipal = function callHprincipal() {
-  (0, _pages.LoadHeard)({
-    func: "loadHeaderAdmin",
-    callback: cPrincipal()
-  });
-};
-
-exports.callHprincipal = callHprincipal;
-
-var callManutencao = function callManutencao() {
-  (0, _pages.LoadInit)({
-    func: "loadManutencao"
-  });
-};
-
-exports.callManutencao = callManutencao;
-
-var callRegisterList = function callRegisterList() {
-  (0, _pages.LoadInit)({
-    func: "loadListCadastro",
-    callback: setDataForSearchCd()
-  });
-};
-
-exports.callRegisterList = callRegisterList;
-
-var callRegisterI = function callRegisterI() {
-  (0, _pages.LoadInit)({
-    func: "loadCadastro"
-  });
-};
-
-exports.callRegisterI = callRegisterI;
-
-var callCdUser = function callCdUser() {
-  (0, _pages.LoadInit)({
-    func: "loadUser",
-    callback: cmbUSer()
-  });
-};
-
-exports.callCdUser = callCdUser;
-
-var callPedido = function callPedido() {
-  (0, _pages.LoadInit)({
-    func: "loadPedido",
-    callback: setDataForSearchPe()
-  });
-};
-
-exports.callPedido = callPedido;
-
-var callnewPedido = function callnewPedido() {
-  (0, _pages.LoadInit)({
-    func: "loadnewPedido",
-    callback: initPedido()
-  });
-};
-
-exports.callnewPedido = callnewPedido;
-},{"./pages/pages":"jMUm"}],"GeCc":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.loginAut = void 0;
-
-var loginAut = function loginAut() {
-  $("#bar").show();
-  var inputNome = document.getElementById("username");
-  var inputPswd = document.getElementById("password");
-  var inputs = {
-    users: inputNome.value,
-    paswds: inputPswd.value
-  };
-  google.script.run.withSuccessHandler(lookLogin).loginSv(inputs);
-};
-
-exports.loginAut = loginAut;
-
-function lookLogin(options) {
-  var mensagemL = document.getElementById("msn-login");
-  var optRet = options.userRetL;
-  var iduser = options.userId;
-  var nomeUser = options.userName;
-  var userEmail = options.userEmail;
-  var userPremissao = options.userPermissao;
-  var token = options.tokenServ;
-  var pp = options.pp;
-  console.log(optRet, pp);
-
-  if (optRet === pp) {
-    localStorage.setItem("token", token);
-    localStorage.setItem('nomeuser', nomeUser);
-    localStorage.setItem('iduser', iduser);
-    localStorage.setItem('email', userEmail);
-    localStorage.setItem('permissao', userPremissao);
-    callManutencao();
-    callHprincipal();
-    $("#bar").hide();
-  } else {
-    $(mensagemL).html("Usuário ou senha invalidos.");
-    $("#bar").hide();
-  }
-}
-},{}],"d6sW":[function(require,module,exports) {
+},{"./pages/pages":"jMUm"}],"d6sW":[function(require,module,exports) {
 "use strict";
 
 var _caldpages = require("./caldpages");
 
-var _login_client = require("./scripts/login_client");
-
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("body-home").addEventListener('click', _login_client.btnClick);
-  document.getElementById("body-home").addEventListener("input", btnInput);
-  document.getElementById("body-home").addEventListener("change", btnChange);
+  document.getElementById("body-home").addEventListener('click', btnClick);
   $("#bar").hide();
-  $("#title-page").html("Home MC");
-  $("#buttons-pedido").hide();
+  $("#preloader").hide();
 });
+/*let    inputNome = document.getElementById("username")
+let    inputPswd = document.getElementById("password")
+let    mensagemL = document.getElementById("msn-login")
+let    senhaUser = document.getElementById("rs-user-senha")
+let    confSenhaUser = document.getElementById("rs-user-conf-senha")*/
 
 window.onload = function () {
-  (0, _caldpages.callHearder)();
   (0, _caldpages.callBody)();
 };
 
-var masks = {
-  cpf: function cpf(value) {
-    return value.replace(/\D/g, '').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})/, '$1-$2').replace(/(-\d{2})\d+?/, '$1');
-  },
-  cnpj: function cnpj(value) {
-    return value.replace(/\D/g, '').replace(/(\d{2})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1/$2').replace(/(\d{4})(\d)/, '$1-$2').replace(/(-\d{2})\d+?/, '$1');
-  },
-  phone: function phone(value) {
-    return value.replace(/\D/g, '').replace(/(\d{2})(\d)/, '($1) $2').replace(/(\d{4})(\d)/, '$1-$2').replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3').replace(/(-\d{4})\d+?/, '$1');
-  },
-  cep: function cep(value) {
-    return value.replace(/\D/g, '').replace(/(\d{5})(\d)/, '$1-$2').replace(/(-\d{3})\d+?/, '$1');
+var btnClick = function btnClick(e) {
+  if (e.target.matches('#btn-lg')) {
+    alert('teste click botão login');
   }
 };
-},{"./caldpages":"CwAk","./scripts/login_client":"GeCc"}]},{},["d6sW"], null)</script>
+
+(function ($) {
+  // Init ScrollMagic
+  var controller = new ScrollMagic.Controller(); // get all slides
+
+  var slides = ["#slide01", "#slide02", "#slide03"]; // get all headers in slides that trigger animation
+
+  var headers = ["#slide01 header", "#slide02 header", "#slide03 header"]; // get all break up sections
+
+  var breakSections = ["#cb01", "#cb02", "#cb03"]; // number of loaded images for preloader progress 
+
+  var loadedCount = 0; //current number of images loaded
+
+  var imagesToLoad = $('.bcg').length; //number of slides with .bcg container
+
+  var loadingProgress = 0; //timeline progress - starts at 0
+
+  $('.bcg').imagesLoaded({
+    background: true
+  }).progress(function (instance, image) {
+    loadProgress();
+  });
+
+  function loadProgress(imgLoad, image) {
+    //one more image has been loaded
+    loadedCount++;
+    loadingProgress = loadedCount / imagesToLoad; //console.log(loadingProgress);
+    // GSAP timeline for our progress bar
+
+    TweenLite.to(progressTl, 0.7, {
+      progress: loadingProgress,
+      ease: Linear.easeNone
+    });
+  } //progress animation instance. the instance's time is irrelevant, can be anything but 0 to void  immediate render
+
+
+  var progressTl = new TimelineMax({
+    paused: true,
+    onUpdate: progressUpdate,
+    onComplete: loadComplete
+  });
+  progressTl //tween the progress bar width
+  .to($('.progress span'), 1, {
+    width: 100,
+    ease: Linear.easeNone
+  }); //as the progress bar witdh updates and grows we put the precentage loaded in the screen
+
+  function progressUpdate() {
+    //the percentage loaded based on the tween's progress
+    loadingProgress = Math.round(progressTl.progress() * 100); //we put the percentage in the screen
+
+    $(".txt-perc").text(loadingProgress + '%');
+  }
+
+  function loadComplete() {
+    // preloader out
+    var preloaderOutTl = new TimelineMax();
+    preloaderOutTl.to($('.progress'), 0.3, {
+      y: 100,
+      autoAlpha: 0,
+      ease: Back.easeIn
+    }).to($('.txt-perc'), 0.3, {
+      y: 100,
+      autoAlpha: 0,
+      ease: Back.easeIn
+    }, 0.1).set($('body'), {
+      className: '-=is-loading'
+    }).set($('#intro'), {
+      className: '+=is-loaded'
+    }).to($('#preloader'), 0.7, {
+      yPercent: 100,
+      ease: Power4.easeInOut
+    }).set($('#preloader'), {
+      className: '+=is-hidden'
+    }).from($('#intro .title'), 1, {
+      autoAlpha: 0,
+      ease: Power1.easeOut
+    }, '-=0.2').from($('#intro p'), 0.7, {
+      autoAlpha: 0,
+      ease: Power1.easeOut
+    }, '+=0.2').from($('.scroll-hint'), 0.3, {
+      y: -20,
+      autoAlpha: 0,
+      ease: Power1.easeOut
+    }, '+=0.1');
+    return preloaderOutTl;
+  } // Enable ScrollMagic only for desktop, disable on touch and mobile devices
+
+
+  if (!Modernizr.touch) {
+    // SCENE 1
+    // create scenes for each of the headers
+    headers.forEach(function (header, index) {
+      // number for highlighting scenes
+      var num = index + 1; // make scene
+
+      var headerScene = new ScrollMagic.Scene({
+        triggerElement: header,
+        // trigger CSS animation when header is in the middle of the viewport 
+        offset: -95 // offset triggers the animation 95 earlier then middle of the viewport, adjust to your liking
+
+      }).setClassToggle('#slide0' + num, 'is-active') // set class to active slide
+      //.addIndicators() // add indicators (requires plugin), use for debugging
+      .addTo(controller);
+    }); // SCENE 2
+    // change color of the nav for dark content blocks
+
+    breakSections.forEach(function (breakSection, index) {
+      // number for highlighting scenes
+      var breakID = $(breakSection).attr('id'); // make scene
+
+      var breakScene = new ScrollMagic.Scene({
+        triggerElement: breakSection,
+        // trigger CSS animation when header is in the middle of the viewport 
+        triggerHook: 0.75
+      }).setClassToggle('#' + breakID, 'is-active') // set class to active slide
+      .on("enter", function (event) {
+        $('#nav-dots').attr('class', 'is-light');
+      }).addTo(controller);
+    }); // SCENE 3
+    // change color of the nav back to dark
+
+    slides.forEach(function (slide, index) {
+      var slideScene = new ScrollMagic.Scene({
+        triggerElement: slide // trigger CSS animation when header is in the middle of the viewport
+
+      }).on("enter", function (event) {
+        $('#nav-dots').removeAttr('class');
+      }).addTo(controller);
+    }); // SCENE 4 - parallax effect on each of the slides with bcg
+    // move bcg container when slide gets into the view
+
+    slides.forEach(function (slide, index) {
+      var $bcg = $(slide).find('.bcg');
+      var slideParallaxScene = new ScrollMagic.Scene({
+        triggerElement: slide,
+        triggerHook: 1,
+        duration: "100%"
+      }).setTween(TweenMax.from($bcg, 1, {
+        y: '-40%',
+        autoAlpha: 0.3,
+        ease: Power0.easeNone
+      })).addTo(controller);
+    }); // SCENE 5 - parallax effect on the intro slide
+    // move bcg container when intro gets out of the the view
+
+    var introTl = new TimelineMax();
+    introTl.to($('#intro header, .scroll-hint'), 0.2, {
+      autoAlpha: 0,
+      ease: Power1.easeNone
+    }) //.to($('#intro .bcg'), 1.4, {y: '20%', ease:Power1.easeOut}, '-=0.2')
+    .to($('#intro'), 0.7, {
+      autoAlpha: 0.5,
+      ease: Power1.easeNone
+    }, 0);
+    var introScene = new ScrollMagic.Scene({
+      triggerElement: '#intro',
+      triggerHook: 0,
+      duration: "100%"
+    }).setTween(introTl).addTo(controller); // change behaviour of controller to animate scroll instead of jump
+
+    controller.scrollTo(function (newpos) {
+      TweenMax.to(window, 1, {
+        scrollTo: {
+          y: newpos
+        },
+        ease: Power1.easeInOut
+      });
+    }); //  bind scroll to anchor links
+
+    $(document).on("click", "a[href^='#']", function (e) {
+      var id = $(this).attr("href");
+
+      if ($(id).length > 0) {
+        e.preventDefault(); // trigger scroll
+
+        controller.scrollTo(id); // if supported by the browser we can even update the URL.
+
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, id);
+        }
+      }
+    });
+  }
+})(jQuery);
+},{"./caldpages":"CwAk"}]},{},["d6sW"], null)</script>
 </body>
 
 </html>

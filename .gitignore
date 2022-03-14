@@ -1,7 +1,4 @@
-node_modules
-dist
-<<<<<<< HEAD
+./node_modules
+./dist
 ./server/model
-=======
-teste.js
->>>>>>> 79c61fc7a2d09a1412cb5e2b6ddd64b2bf4836ca
+
