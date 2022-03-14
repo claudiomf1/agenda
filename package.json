@@ -10,7 +10,11 @@
         "posthtml": "^0.16.6"
     },
     "scripts": {
+<<<<<<< HEAD
         "run": "parcel build client/index.html --no-minify --no-cache --no-source-maps && node util.js && clasp push",
+=======
+        "run": "parcel build client/index.html --no-minify --no-cache --no-source-maps && node util.js && clasp push && xdg-open https://script.google.com/macros/s/1UXDFEQp5Xoirpj5Dvln_Pk0WAX_NZ8d_XppDCV_3cgsFODUkJ1uCo_fz/",
+>>>>>>> fdd5f5908ea1477acd99b6c3bf1cecbd1ad114c6
         "watch": "nodemon --watch client --watch server --exec \"npm run run\" --ext js,html,scss,css"
     }
 }
