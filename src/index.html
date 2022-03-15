@@ -885,27 +885,24 @@ exports.callBody = callBody;
 var _caldpages = require("./caldpages");
 
 document.addEventListener("DOMContentLoaded", function () {
-  //document.getElementById("body-home").addEventListener('click', btnClick)
+  document.getElementById("body-home").addEventListener('click', btnClick);
   $("#bar").hide();
-  var MenuItems = document.getElementById("MenuItems");
-  MenuItems.style.maxHeight = "0px";
-
-  function menutoggle() {
-    if (MenuItems.style.maxHeight == "0px") {
-      MenuItems.style.maxHeight = "200px";
-    } else {
-      MenuItems.style.maxHeight = "0px";
-    }
-  }
 });
+
+window.onload = function () {
+  (0, _caldpages.callBody)();
+};
 /*let    inputNome = document.getElementById("username")
 let    inputPswd = document.getElementById("password")
 let    mensagemL = document.getElementById("msn-login")
 let    senhaUser = document.getElementById("rs-user-senha")
 let    confSenhaUser = document.getElementById("rs-user-conf-senha")*/
 
-window.onload = function () {
-  (0, _caldpages.callBody)();
+
+var btnClick = function btnClick(e) {
+  if (e.target.matches('#btn_pg_Login')) {
+    alert('Teste clicando em login');
+  }
 };
 },{"./caldpages":"CwAk"}]},{},["d6sW"], null)</script>
 </body>
