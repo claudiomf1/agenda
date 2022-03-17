@@ -11,7 +11,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/59feaf50a6.js" crossorigin="anonymous"></script>
-    <style>/* uso de fonts outros: 
+    <style>@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Montserrat:wght@100;300;400;500;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    text-align: center;
+  }
+
+  .col-2, .col-3, .col-4 {
+    flex-basis: 100%;
+  }
+
+  .single-product .row {
+    text-align: left;
+  }
+
+  .single-product .col-2 {
+    padding: 20px 0;
+  }
+
+  .single-product h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .cart-info p {
+    display: none;
+  }
+}
+body {
+  max-width: 2600px;
+  margin: 0 auto;
+}
+
+body, input, textarea, select, button {
+  font: 400 2rem "Open Sans", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--blue-900);
+}
+
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* uso de fonts outros: 
 font-family: 'Abril Fatface', cursive;
 font-family: 'Lato', sans-serif;
 font-family: 'Poppins', sans-serif;
@@ -19,17 +109,6 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Rubik', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 /*https://drive.google.com/uc?id=*/
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 .navbar {
   display: flex;
   align-items: center;
@@ -625,35 +704,10 @@ form a {
   transition: transform 1s;
 }
 
-@media only screen and (max-width: 600px) {
-  .row {
-    text-align: center;
-  }
-
-  .col-2, .col-3, .col-4 {
-    flex-basis: 100%;
-  }
-
-  .single-product .row {
-    text-align: left;
-  }
-
-  .single-product .col-2 {
-    padding: 20px 0;
-  }
-
-  .single-product h1 {
-    font-size: 26px;
-    line-height: 32px;
-  }
-
-  .cart-info p {
-    display: none;
-  }
-}
 /* uso de fonts: 
-font-family: 'Abril Fatface', cursive;
 font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Rubik', sans-serif;
@@ -892,11 +946,13 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onload = function () {
   (0, _caldpages.callBody)();
 };
-/*let    inputNome = document.getElementById("username")
+/*
+let    inputNome = document.getElementById("username")
 let    inputPswd = document.getElementById("password")
 let    mensagemL = document.getElementById("msn-login")
 let    senhaUser = document.getElementById("rs-user-senha")
-let    confSenhaUser = document.getElementById("rs-user-conf-senha")*/
+let    confSenhaUser = document.getElementById("rs-user-conf-senha")
+*/
 
 
 var btnClick = function btnClick(e) {

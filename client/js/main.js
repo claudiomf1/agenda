@@ -23,11 +23,13 @@ window.onload = function(){
 
 }
 
-  /*let    inputNome = document.getElementById("username")
+  /*
+  let    inputNome = document.getElementById("username")
   let    inputPswd = document.getElementById("password")
   let    mensagemL = document.getElementById("msn-login")
   let    senhaUser = document.getElementById("rs-user-senha")
-  let    confSenhaUser = document.getElementById("rs-user-conf-senha")*/
+  let    confSenhaUser = document.getElementById("rs-user-conf-senha")
+  */
 
 
   const btnClick = (e) => {
