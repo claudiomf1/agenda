@@ -925,7 +925,7 @@ exports.LoadFooter = LoadFooter;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.callHearder = exports.callBody = void 0;
+exports.callLogin = exports.callHearder = exports.callBody = void 0;
 
 var _pages = require("./pages/pages");
 
@@ -944,6 +944,14 @@ var callBody = function callBody() {
 };
 
 exports.callBody = callBody;
+
+var callLogin = function callLogin() {
+  (0, _pages.LoadInit)({
+    func: "loadLogin"
+  }); //$("#body-init").hide()
+};
+
+exports.callLogin = callLogin;
 },{"./pages/pages":"jMUm"}],"d6sW":[function(require,module,exports) {
 "use strict";
 
@@ -968,7 +976,10 @@ let    confSenhaUser = document.getElementById("rs-user-conf-senha")
 
 var btnClick = function btnClick(e) {
   if (e.target.matches('#btn_pg_Login')) {
-    alert('Teste clicando em login');
+    // $("#bar").show()
+    (0, _caldpages.callLogin)(); //$("#title-page").html("Login")
+    // $("#bar").hide()
+    //  alert ('Teste clicando em login')
   }
 };
 },{"./caldpages":"CwAk"}]},{},["d6sW"], null)</script>
