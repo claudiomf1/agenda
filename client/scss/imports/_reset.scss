@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    display: block;
 }
 
 @media only screen and (max-width: 600px) {
@@ -33,8 +33,9 @@ html {
 }
 
 body {
-    max-width: 2600px;
-    margin: 0 auto;
+    display: block;
+    /*  max-width: 2600px;
+    margin: 0 auto; */
 }
 
 body,
@@ -42,7 +43,7 @@ input,
 textarea,
 select,
 button {
-    font: 400 2rem 'Open Sans', sans-serif;
+    font: 400 1rem 'Open Sans', sans-serif;
 }
 
 button {
@@ -92,4 +93,12 @@ h6 {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.padding-32 {
+    padding: 2rem;
+}
+
+.mag-top-8 {
+    margin-top: 0.9rem;
 }
