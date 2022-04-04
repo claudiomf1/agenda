@@ -1,0 +1,16 @@
+/* Var para responsive */
+
+$iPhone7: iPhone7_v;
+$SansumgGalaxyS8:SansumgGalaxyS8_v;
+@mixin breakpoint($point) {
+    @if $point==small-up {
+        @media only screen and (max-width: 700px) {
+            @content;
+        }
+    }
+    @else if $point==SansumgGalaxyS8_v {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+}

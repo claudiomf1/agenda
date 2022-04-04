@@ -6,6 +6,8 @@
 
 html {
     display: block;
+    /* A cada 1rem sera considerado 10px */
+    font-size: 62.5%;
 }
 
 @media only screen and (max-width: 600px) {
