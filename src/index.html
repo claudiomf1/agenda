@@ -7,13 +7,14 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/59feaf50a6.js" crossorigin="anonymous"></script>
 
-    <style>@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Montserrat:wght@100;300;400;500;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
+    <style>/* Var para responsive */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@100;400;700&family=Montserrat:wght@100;300;400;500;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Rubik:ital,wght@0,300;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,11 +23,11 @@
 
 html {
   display: block;
-  /* A cada 1rem sera considerado 10px */
+  /* A cada 1rem sera considerado 1rem */
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-device-width: 50rem) {
   .row {
     text-align: center;
   }
@@ -34,7 +35,7 @@ html {
   .col-2,
 .col-3,
 .col-4 {
-    flex-basis: 100%;
+    flex-basis: 50%;
   }
 
   .single-product .row {
@@ -42,12 +43,12 @@ html {
   }
 
   .single-product .col-2 {
-    padding: 20px 0;
+    padding: 2rem 0;
   }
 
   .single-product h1 {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
   }
 
   .cart-info p {
@@ -56,7 +57,7 @@ html {
 }
 body {
   display: block;
-  /*  max-width: 2600px;
+  /*  max-width: 260rem;
   margin: 0 auto; */
 }
 
@@ -65,7 +66,16 @@ input,
 textarea,
 select,
 button {
-  font: 400 1rem "Open Sans", sans-serif;
+  font: 400 1.6rem "Open Sans", sans-serif;
+}
+@media only screen and (max-device-width: 50rem) {
+  body,
+input,
+textarea,
+select,
+button {
+    font-size: 3.7rem;
+  }
 }
 
 button {
@@ -93,8 +103,13 @@ h2 {
 }
 
 h3 {
-  font-size: 5rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
+}
+@media only screen and (max-device-width: 50rem) {
+  h3 {
+    font-size: 3.9rem;
+  }
 }
 
 h4 {
@@ -137,36 +152,36 @@ font-family: 'Ubuntu', sans-serif;
 .navbar {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .fa-shopping-basket {
-  margin-right: 5px;
+  margin-right: 0.5rem;
   color: white;
 }
 
 .fa-home {
-  margin-right: 5px;
+  margin-right: 0.5rem;
   color: white;
 }
 
 .fa-product-hunt {
-  margin-right: 5px;
+  margin-right: 0.5rem;
   color: white;
 }
 
 .fa-address-card {
-  margin-right: 5px;
+  margin-right: 0.5rem;
   color: white;
 }
 
 .fa-phone {
-  margin-right: 5px;
+  margin-right: 0.5rem;
   color: white;
 }
 
 .fa-user-alt {
-  margin-right: 5px;
+  margin-right: 0.5rem;
   color: white;
 }
 
@@ -179,17 +194,43 @@ nav ul {
   display: inline-block;
   list-style: none;
 }
+@media only screen and (max-device-width: 50rem) {
+  nav ul {
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    background: #333333;
+    opacity: 0.8;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.6s;
+  }
+}
 
 nav ul li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 2rem;
+}
+@media only screen and (max-device-width: 50rem) {
+  nav ul li {
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+    margin-top: 1rem;
+  }
 }
 
-a {
+nav ul li a {
   font-weight: bold;
   text-decoration: none;
   color: #f6921e;
-  margin-left: 5px;
+  margin-left: 5rem;
+}
+@media only screen and (max-device-width: 50rem) {
+  nav ul li a {
+    color: whitesmoke;
+    font-size: 6rem;
+  }
 }
 
 p {
@@ -198,7 +239,7 @@ p {
 
 .container {
   margin: auto;
-  max-width: 1024px;
+  max-width: 102.4rem;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -206,44 +247,49 @@ p {
 }
 
 .row {
-  --bs-gutter-x: 1.5rem;
+  --qualquercoisa: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -0.5);
-  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-right: calc(var(--qualquercoisa) * -0.5);
+  margin-left: calc(var(--qualquercoisa) * -0.5);
 }
 
 .col-2 {
-  flex-basis: 50%;
-  min-width: 300px;
+  flex-basis: 90%;
+  min-width: 30rem;
+}
+@media only screen and (max-device-width: 50rem) {
+  .col-2 {
+    margin-top: 40rem;
+  }
 }
 
 .col-2 img {
-  width: 500px;
-  height: 350px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px black;
-  margin-right: 70px;
+  width: 50rem;
+  height: 35rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 0px 1rem black;
+  margin-right: 7rem;
 }
 
 .col-22 img {
-  width: 500px;
-  height: 350px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px black;
-  margin-bottom: 70px;
+  width: 50rem;
+  height: 35rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 0px 1rem black;
+  margin-bottom: 7rem;
 }
 
 .col-2 h1 {
-  font-size: 4rem;
-  line-height: 60px;
-  margin: 25px 0;
+  font-size: 7rem;
+  line-height: 6rem;
+  margin: 2.5rem 0;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-device-width: 50rem) {
   .col-2 h1 {
-    font-size: 12rem;
+    font-size: 6.5rem;
   }
 }
 
@@ -251,9 +297,9 @@ p {
   display: inline-block;
   background:black;
   color: white;
-  padding: 8px 30px;
-  margin: 30px 0;
-  border-radius: 30px;
+  padding: 0.8rem 3rem;
+  margin: 3rem 0;
+  border-radius: 3rem;
 } */
 /* .btn:hover {
     background: rgba(160, 55, 55, 0.856);
@@ -263,63 +309,73 @@ p {
 }
 
 .header .row {
-  margin-top: 70px;
+  margin-top: 7rem;
 }
 
 .categories {
-  margin: 70px 0;
+  margin: 7rem 0;
 }
 
 .col-3 {
   flex-basis: 30%;
-  min-width: 250px;
-  margin-bottom: 30px;
+  min-width: 25rem;
+  margin-bottom: 3rem;
 }
 
 .col-3 img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px black;
-  margin-bottom: 70px;
+  border-radius: 1.2rem;
+  box-shadow: 0px 0px 1rem black;
+  margin-bottom: 7rem;
 }
 
 .small-container {
-  max-width: 1080px;
+  max-width: 108rem;
   margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .col-4 {
   flex-basis: 25%;
-  padding: 10px;
-  min-width: 200px;
-  margin-bottom: 50px;
+  padding: 1rem;
+  min-width: 20rem;
+  margin-bottom: 5rem;
   transition: transform 0.5s;
+}
+@media only screen and (max-device-width: 50rem) {
+  .col-4 {
+    flex-basis: 50%;
+  }
 }
 
 .col-4 img {
   width: 100%;
-  height: 300px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px black;
-  margin-bottom: 30px;
+  height: 30rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 0px 1rem black;
+  margin-bottom: 3rem;
+}
+@media only screen and (max-device-width: 50rem) {
+  .col-4 img {
+    width: none;
+  }
 }
 
 .title {
   text-align: center;
-  margin: 0 auto 80px;
+  margin: 0 auto 8rem;
   position: relative;
-  line-height: 60px;
+  line-height: 6rem;
   color: #555555;
 }
 
 .title::after {
   content: "";
   background: #293f50;
-  width: 80px;
-  height: 5px;
-  border-radius: 5px;
+  width: 8rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -332,7 +388,7 @@ h4 {
 }
 
 .col-4 p {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .rating .fa {
@@ -340,17 +396,17 @@ h4 {
 }
 
 .col-4:hover {
-  transform: translateY(-7px);
+  transform: translateY(-0.7rem);
 }
 
 .offer {
   background: radial-gradient(#ffffff, #293f50);
-  margin-top: 80px;
-  padding: 30px 0;
+  margin-top: 8rem;
+  padding: 3rem 0;
 }
 
 .col-2 .offer-img {
-  padding: 50px;
+  padding: 5rem;
 }
 
 small {
@@ -358,50 +414,60 @@ small {
 }
 
 .testimonial {
-  padding-top: 108px;
+  padding-top: 10.8rem;
 }
 
 .testimonial .col-3 {
   text-align: center;
-  padding: 40px 20px;
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 4rem 2rem;
+  box-shadow: 0 0 2rem 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.5s;
 }
 
 .testimonial .col-3 img {
-  width: 50px;
-  margin-top: 20px;
+  width: 5rem;
+  margin-top: 2rem;
   border-radius: 50%;
 }
 
 .testimonial .col-3:hover {
-  transform: translateY(-10px);
+  transform: translateY(-1rem);
 }
 
 .fa.fa-quote-left {
-  font-size: 34px;
+  font-size: 3.4rem;
   color: black;
 }
 
 .col-3 p {
-  font-size: 12px;
-  margin: 12px 0;
+  font-size: 2.2rem;
+  margin: 1.2rem 0;
   color: #777777;
+}
+@media only screen and (max-device-width: 50rem) {
+  .col-3 p {
+    font-size: 3.2rem;
+  }
 }
 
 .testimonial .col-3 h3 {
-  font-weight: 600;
+  font-weight: 60rem;
   color: #555555;
-  font-size: 18px;
+  font-size: 1.8rem;
+}
+@media only screen and (max-device-width: 50rem) {
+  .testimonial .col-3 h3 {
+    font-size: 2.8rem;
+  }
 }
 
 .brands {
-  margin: 100px auto;
+  margin: 10rem auto;
 }
 
 .col-5 {
-  width: 160px;
+  width: 16rem;
 }
 
 .col-5 img {
@@ -417,8 +483,13 @@ small {
 .footer {
   background: black;
   color: #8a8a8a;
-  font-size: 14px;
-  padding: 60px 0 20px;
+  font-size: 1.4rem;
+  padding: 6rem 0 2rem;
+}
+@media only screen and (max-device-width: 50rem) {
+  .footer {
+    font-size: 4.4rem;
+  }
 }
 
 .footer p {
@@ -433,8 +504,8 @@ small {
 .footer-col-2,
 .footer-col-3,
 .footer-col-4 {
-  min-width: 250px;
-  margin-bottom: 20px;
+  min-width: 25rem;
+  margin-bottom: 2rem;
 }
 
 .footer-col-1 {
@@ -447,9 +518,9 @@ small {
 }
 
 .footer-col-2 img {
-  width: 180px;
-  margin-bottom: 20px;
-  height: 39px;
+  width: 18rem;
+  margin-bottom: 2rem;
+  height: 3.9rem;
 }
 
 .footer-col-3,
@@ -463,18 +534,18 @@ ul {
 }
 
 .app-logo {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 .app-logo img {
-  width: 140px;
+  width: 14rem;
 }
 
 .footer hr {
   border: none;
   background: #b5b5b5;
-  height: 1px;
-  margin: 20px 0;
+  height: 0.1rem;
+  margin: 2rem 0;
 }
 
 .copyright {
@@ -482,47 +553,25 @@ ul {
 }
 
 .menu-icon {
-  width: 28px;
-  margin-left: 20px;
+  width: 2.8rem;
+  margin-left: 2rem;
   display: none;
 }
-
-@media only screen and (max-width: 800px) {
-  nav ul {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background: #333333;
-    opacity: 0.8;
-    width: 100%;
-    overflow: hidden;
-    transition: max-height 0.6s;
-  }
-
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-    margin-right: 50px;
-    margin-top: 10px;
-  }
-
-  nav ul li a {
-    color: whitesmoke;
-  }
-
+@media only screen and (max-device-width: 50rem) {
   .menu-icon {
     display: block;
     cursor: pointer;
   }
 }
+
 .row-2 {
   justify-content: space-between;
-  margin: 100px auto 50px;
+  margin: 10rem auto 5rem;
 }
 
 select {
-  border: 1px solid coral;
-  padding: 5px;
+  border: 0.1rem solid coral;
+  padding: 0.5rem;
 }
 
 select:focus {
@@ -530,17 +579,17 @@ select:focus {
 }
 
 .page-btn {
-  margin: 0 auto 80px;
+  margin: 0 auto 8rem;
 }
 
 .page-btn span {
   display: inline-block;
-  border: 1px solid #faadbd;
-  margin-left: 10px;
-  width: 40px;
-  height: 40px;
+  border: 0.1rem solid #faadbd;
+  margin-left: 1rem;
+  width: 4rem;
+  height: 4rem;
   text-align: center;
-  line-height: 40px;
+  line-height: 4rem;
   cursor: pointer;
 }
 
@@ -550,7 +599,7 @@ select:focus {
 }
 
 .single-product {
-  margin-top: 80px;
+  margin-top: 8rem;
 }
 
 .single-product .col-2 img {
@@ -558,28 +607,28 @@ select:focus {
 }
 
 .single-product .col-2 {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .single-product h4 {
-  margin: 20px 0;
-  font-size: 22px;
+  margin: 2rem 0;
+  font-size: 2.2rem;
   font-weight: bold;
 }
 
 .single-product select {
   display: block;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .single-product input {
-  width: 50px;
-  height: 40px;
-  padding-left: 10px;
-  font-size: 20px;
-  margin-right: 10px;
-  border: 1px solid coral;
+  width: 5rem;
+  height: 4rem;
+  padding-left: 1rem;
+  font-size: 2rem;
+  margin-right: 1rem;
+  border: 0.1rem solid coral;
 }
 
 input:focus {
@@ -588,7 +637,7 @@ input:focus {
 
 .single-product .fa {
   color: #f1607d;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 .small-img-row {
@@ -602,7 +651,7 @@ input:focus {
 }
 
 .cart-page {
-  margin: 80px auto;
+  margin: 8rem auto;
 }
 
 table {
@@ -617,31 +666,31 @@ table {
 
 th {
   text-align: left;
-  padding: 5px;
+  padding: 0.5rem;
   color: #ffffff;
   background: #ca4560;
   font-weight: normal;
 }
 
 td {
-  padding: 10px 5px;
+  padding: 1rem 0.5rem;
 }
 
 td input {
-  width: 40px;
-  height: 30px;
-  padding: 5px;
+  width: 4rem;
+  height: 3rem;
+  padding: 0.5rem;
 }
 
 td a {
   color: #ff0033;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 td img {
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1rem;
 }
 
 .total-price {
@@ -650,9 +699,9 @@ td img {
 }
 
 .total-price table {
-  border-top: 3px solid coral;
+  border-top: 0.3rem solid coral;
   width: 100%;
-  max-width: 350px;
+  max-width: 35rem;
 }
 
 td:last-child {
@@ -664,29 +713,29 @@ th:last-child {
 }
 
 .account-page {
-  padding: 50px 0;
+  padding: 5rem 0;
   background: radial-gradient(#ffffff, #faadbd);
 }
 
 .form-container {
   background: #ffffff;
-  width: 300px;
-  height: 400px;
+  width: 30rem;
+  height: 40rem;
   position: relative;
   text-align: center;
-  padding: 20px 0;
+  padding: 2rem 0;
   margin: auto;
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 9px;
+  box-shadow: 0 0 2rem 0px rgba(0, 0, 0, 0.3);
+  border-radius: 0.9rem;
   overflow: hidden;
 }
 
 .form-container span {
   font-weight: bold;
-  padding: 0 10px;
+  padding: 0 1rem;
   color: #555555;
   cursor: pointer;
-  width: 100px;
+  width: 10rem;
   display: inline-block;
 }
 
@@ -695,26 +744,26 @@ th:last-child {
 }
 
 .form-container form {
-  max-width: 300px;
-  padding: 0 20px;
+  max-width: 30rem;
+  padding: 0 2rem;
   position: absolute;
-  top: 130px;
+  top: 13rem;
   transition: transform 1s;
 }
 
 form input {
   width: 100%;
-  height: 30px;
-  margin: 10px 0;
-  padding: 0 10px;
-  border: 1px solid #cccccc;
+  height: 3rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border: 0.1rem solid #cccccc;
 }
 
 form .btn {
   width: 100%;
   border: none;
   cursor: pointer;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 form .btn:focus {
@@ -722,7 +771,7 @@ form .btn:focus {
 }
 
 #LoginForm {
-  left: -300px;
+  left: -30rem;
 }
 
 #RegForm {
@@ -730,16 +779,16 @@ form .btn:focus {
 }
 
 form a {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 #Indicator {
-  width: 100px;
+  width: 10rem;
   border: none;
   background: coral;
-  height: 3px;
-  margin-top: 8px;
-  transform: translateX(100px);
+  height: 0.3rem;
+  margin-top: 0.8rem;
+  transform: translateX(10rem);
   transition: transform 1s;
 }
 
@@ -766,29 +815,41 @@ font-family: 'Ubuntu', sans-serif;
 /*    --------------------------------------------------
 :: Login Section
 -------------------------------------------------- */
+/* Var para responsive */
 #login {
-  padding-top: 50px;
+  padding-top: 5rem;
 }
 
 #login .form-wrap {
   width: 30%;
   margin: 0 auto;
 }
+@media only screen and (max-device-width: 50rem) {
+  #login .form-wrap {
+    padding: 0 2rem;
+    width: 60%;
+  }
+}
 
 #login h1 {
   color: #FF6380;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 2rem;
+}
+@media only screen and (max-device-width: 50rem) {
+  #login h1 {
+    font-size: 3.8rem;
+  }
 }
 
 #login .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
 #login .checkbox {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -800,38 +861,43 @@ font-family: 'Ubuntu', sans-serif;
 #login .checkbox.show:before {
   content: "\e013";
   color: #1fa67b;
-  font-size: 17px;
-  margin: 1px 0 0 3px;
+  font-size: 1.7rem;
+  margin: 0.1rem 0 0 0.3rem;
   position: absolute;
   pointer-events: none;
   font-family: "Glyphicons Halflings";
 }
 
 #login .checkbox .character-checkbox {
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
-  border-radius: 3px;
-  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #ccc;
   vertical-align: middle;
   display: inline-block;
 }
 
 #login .checkbox .label {
   color: #6d6d6d;
-  font-size: 13px;
+  font-size: 10.3rem;
   font-weight: normal;
 }
 
 #login .btn.btn-custom {
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 #login .forget {
-  font-size: 13px;
+  font-size: 1.5rem;
   text-align: center;
   display: block;
+}
+@media only screen and (max-device-width: 50rem) {
+  #login .forget {
+    font-size: 5rem;
+  }
 }
 
 /*    --------------------------------------------------
@@ -839,6 +905,12 @@ font-family: 'Ubuntu', sans-serif;
        -------------------------------------------------- */
 .form-control {
   color: #212121;
+}
+@media only screen and (max-device-width: 50rem) {
+  .form-control {
+    line-height: 8rem;
+    font-size: 5.2rem;
+  }
 }
 
 .btn-custom {
@@ -851,13 +923,24 @@ font-family: 'Ubuntu', sans-serif;
   color: #fff;
 }
 
+@media only screen and (max-device-width: 50rem) {
+  #login .btn {
+    line-height: 8rem;
+    font-size: 6.2rem;
+  }
+}
 /*    --------------------------------------------------
        :: Footer
        -------------------------------------------------- */
 #footer {
   color: #6d6d6d;
-  font-size: 12px;
+  font-size: 1.2rem;
   text-align: center;
+}
+@media only screen and (max-device-width: 50rem) {
+  #footer {
+    font-size: 1.9rem;
+  }
 }
 
 #footer p {
@@ -866,18 +949,7 @@ font-family: 'Ubuntu', sans-serif;
 
 #footer a {
   color: inherit;
-}
-
-@media (max-width: 720px) {
-  #login .form-wrap {
-    padding: 0 2rem;
-  }
-
-  #login h1 {
-    font-size: 1rem;
-  }
-}
-/* Var para responsive */</style>
+}</style>
 </head>
 
 <body>

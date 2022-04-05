@@ -1,3 +1,4 @@
+@import './breakpoint';
 * {
     margin: 0;
     padding: 0;
@@ -6,28 +7,28 @@
 
 html {
     display: block;
-    /* A cada 1rem sera considerado 10px */
+    /* A cada 1rem sera considerado 1rem */
     font-size: 62.5%;
 }
 
-@media only screen and (max-width: 600px) {
+@include breakpoint(AsusZenfone5) {
     .row {
         text-align: center;
     }
     .col-2,
     .col-3,
     .col-4 {
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
     .single-product .row {
         text-align: left;
     }
     .single-product .col-2 {
-        padding: 20px 0;
+        padding: 2rem 0;
     }
     .single-product h1 {
-        font-size: 26px;
-        line-height: 32px;
+        font-size: 2.6rem;
+        line-height: 3.2rem;
     }
     .cart-info p {
         display: none;
@@ -36,7 +37,7 @@ html {
 
 body {
     display: block;
-    /*  max-width: 2600px;
+    /*  max-width: 260rem;
     margin: 0 auto; */
 }
 
@@ -45,7 +46,10 @@ input,
 textarea,
 select,
 button {
-    font: 400 1rem 'Open Sans', sans-serif;
+    font: 400 1.6rem 'Open Sans', sans-serif;
+    @include breakpoint(AsusZenfone5) {
+        font-size: 3.7rem;
+    }
 }
 
 button {
@@ -73,8 +77,11 @@ h2 {
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
+    @include breakpoint(AsusZenfone5) {
+        font-size: 3.9rem;
+    }
 }
 
 h4 {

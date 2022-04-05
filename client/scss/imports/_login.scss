@@ -2,29 +2,37 @@
 	:: Login Section
 	-------------------------------------------------- */
  
+ @import './breakpoint';
  #login {
-     padding-top: 50px
+     padding-top: 5rem
  }
  
  #login .form-wrap {
      width: 30%;
      margin: 0 auto;
+     @include breakpoint(AsusZenfone5) {
+         padding: 0 2rem;
+         width: 60%;
+     }
  }
  
  #login h1 {
      color: #FF6380;
-     font-size: 18px;
+     font-size: 1.8rem;
      text-align: center;
      font-weight: bold;
-     padding-bottom: 20px;
+     padding-bottom: 2rem;
+     @include breakpoint(AsusZenfone5) {
+         font-size: 3.8rem
+     }
  }
  
  #login .form-group {
-     margin-bottom: 25px;
+     margin-bottom: 2.5rem;
  }
  
  #login .checkbox {
-     margin-bottom: 20px;
+     margin-bottom: 2rem;
      position: relative;
      -webkit-user-select: none;
      -moz-user-select: none;
@@ -36,38 +44,41 @@
  #login .checkbox.show:before {
      content: '\e013';
      color: #1fa67b;
-     font-size: 17px;
-     margin: 1px 0 0 3px;
+     font-size: 1.7rem;
+     margin: 0.1rem 0 0 0.3rem;
      position: absolute;
      pointer-events: none;
      font-family: 'Glyphicons Halflings';
  }
  
  #login .checkbox .character-checkbox {
-     width: 25px;
-     height: 25px;
+     width: 2.5rem;
+     height: 2.5rem;
      cursor: pointer;
-     border-radius: 3px;
-     border: 1px solid #ccc;
+     border-radius: 0.3rem;
+     border: 0.1rem solid #ccc;
      vertical-align: middle;
      display: inline-block;
  }
  
  #login .checkbox .label {
      color: #6d6d6d;
-     font-size: 13px;
+     font-size: 10.3rem;
      font-weight: normal;
  }
  
  #login .btn.btn-custom {
-     font-size: 14px;
-     margin-bottom: 20px;
+     font-size: 1.4rem;
+     margin-bottom: 2rem;
  }
  
  #login .forget {
-     font-size: 13px;
+     font-size: 1.5rem;
      text-align: center;
      display: block;
+     @include breakpoint(AsusZenfone5) {
+         font-size: 5rem;
+     }
  }
  /*    --------------------------------------------------
         :: Inputs & Buttons
@@ -75,6 +86,10 @@
  
  .form-control {
      color: #212121;
+     @include breakpoint(AsusZenfone5) {
+         line-height: 8rem;
+         font-size: 5.2rem;
+     }
  }
  
  .btn-custom {
@@ -86,14 +101,24 @@
  .btn-custom:focus {
      color: #fff;
  }
+ 
+ @include breakpoint(AsusZenfone5) {
+     #login .btn {
+         line-height: 8rem;
+         font-size: 6.2rem;
+     }
+ }
  /*    --------------------------------------------------
         :: Footer
         -------------------------------------------------- */
  
  #footer {
      color: #6d6d6d;
-     font-size: 12px;
+     font-size: 1.2rem;
      text-align: center;
+     @include breakpoint(AsusZenfone5) {
+         font-size: 1.9rem;
+     }
  }
  
  #footer p {
@@ -102,13 +127,4 @@
  
  #footer a {
      color: inherit;
- }
- 
- @media (max-width: 720px) {
-     #login .form-wrap {
-         padding: 0 2rem;
-     }
-     #login h1 {
-         font-size: 1rem
-     }
  }

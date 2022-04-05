@@ -1,15 +1,14 @@
 /* Var para responsive */
 
-$iPhone7: iPhone7_v;
-$SansumgGalaxyS8:SansumgGalaxyS8_v;
 @mixin breakpoint($point) {
-    @if $point==small-up {
-        @media only screen and (max-width: 700px) {
+    @if $point==AsusZenfone5 {
+        @media only screen and (max-device-width: 50rem) {
             @content;
         }
     }
-    @else if $point==SansumgGalaxyS8_v {
-        @media (min-width: 600px) {
+    @else if $point==SansumgGalaxyS8 {
+        /* Este nao esta sendo usado */
+        @media (max-device-width: 60rem) {
             @content;
         }
     }
