@@ -6,12 +6,17 @@
 }
 
 html {
-    display: block;
-    /* A cada 1rem sera considerado 1rem */
+    //display: block;
+    /* A cada 1rem sera considerado 10px */
     font-size: 62.5%;
 }
 
-@include breakpoint(AsusZenfone5) {
+body {
+    // font-size: 1.6rem;
+}
+
+
+/* @include breakpoint(AsusZenfone5) {
     .row {
         text-align: center;
     }
@@ -34,19 +39,14 @@ html {
         display: none;
     }
 }
-
-body {
-    display: block;
-    /*  max-width: 260rem;
-    margin: 0 auto; */
-}
+ */
 
 body,
 input,
 textarea,
 select,
 button {
-    font: 400 1.6rem 'Open Sans', sans-serif;
+    font: 400 1.6rem 'Poppins', sans-serif;
     @include breakpoint(AsusZenfone5) {
         font-size: 3.7rem;
     }
@@ -67,8 +67,9 @@ h6 {
 }
 
 h1 {
-    font-size: 6rem;
-    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: black;
 }
 
 h2 {

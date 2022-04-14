@@ -10,9 +10,33 @@
  #login .form-wrap {
      width: 30%;
      margin: 0 auto;
-     @include breakpoint(AsusZenfone5) {
+     @include small {
          padding: 0 2rem;
-         width: 60%;
+         width: 90%;
+         h1 {
+             font-size: 6rem;
+         }
+         .form-control::placeholder {
+             font-size: 6rem;
+         }
+         .btn {
+             line-height: 15rem;
+             font-size: 13rem;
+             border: 3px solid red;
+         }
+         .form-group {
+             // border: 3px solid rgb(47, 0, 255);
+             height: 14rem;
+             input {
+                 font-size: 9.5rem;
+                 border: 2px solid rgba(0, 0, 0, 0.486);
+                 margin: 6rem 0;
+             }
+         }
+         label.sr-only {
+             font-size: 12rem;
+             border: 3px solid rgba(255, 8, 0, 0.938);
+         }
      }
  }
  
@@ -86,6 +110,8 @@
  
  .form-control {
      color: #212121;
+     line-height: 3rem;
+     font-size: 2rem;
      @include breakpoint(AsusZenfone5) {
          line-height: 8rem;
          font-size: 5.2rem;
@@ -100,13 +126,6 @@
  .btn-custom:hover,
  .btn-custom:focus {
      color: #fff;
- }
- 
- @include breakpoint(AsusZenfone5) {
-     #login .btn {
-         line-height: 8rem;
-         font-size: 6.2rem;
-     }
  }
  /*    --------------------------------------------------
         :: Footer

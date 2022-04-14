@@ -1,4 +1,4 @@
-/* uso de fonts outros: 
+        /* uso de fonts outros: 
 font-family: 'Abril Fatface', cursive;
 font-family: 'Lato', sans-serif;
 font-family: 'Poppins', sans-serif;
@@ -6,630 +6,765 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Rubik', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 /*https://drive.google.com/uc?id=*/
-
-@import './breakpoint';
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-}
-
-.fa-shopping-basket {
-    margin-right: 0.5rem;
-    color: white;
-}
-
-.fa-home {
-    margin-right: 0.5rem;
-    color: white;
-}
-
-.fa-product-hunt {
-    margin-right: 0.5rem;
-    color: white;
-}
-
-.fa-address-card {
-    margin-right: 0.5rem;
-    color: white;
-}
-
-.fa-phone {
-    margin-right: 0.5rem;
-    color: white;
-}
-
-.fa-user-alt {
-    margin-right: 0.5rem;
-    color: white;
-}
-
-nav {
-    flex: 1;
-    text-align: left;
-}
-
-nav ul {
-    display: inline-block;
-    list-style: none;
-    @include breakpoint(AsusZenfone5) {
-        position: absolute;
-        top: 7rem;
-        left: 0;
-        background: #333333;
-        opacity: 0.8;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.6s;
-    }
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 2rem;
-    @include breakpoint(AsusZenfone5) {
-        display: block;
-        margin-bottom: 1rem;
-        margin-right: 5rem;
-        margin-top: 1rem;
-    }
-}
-
-nav ul li a {
-    font-weight: bold;
-    text-decoration: none;
-    color: #f6921e;
-    margin-left: 5rem;
-    @include breakpoint(AsusZenfone5) {
-        color: whitesmoke;
-        font-size: 6rem;
-    }
-}
-
-p {
-    color: #555555;
-}
-
-.container {
-    margin: auto;
-    max-width: 102.4rem;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    position: relative;
-}
-
-.row {
-    //  --bs-gutter-x: 1.5rem;
-    --qualquercoisa: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: calc(var(--qualquercoisa) * -.5);
-    margin-left: calc(var(--qualquercoisa) * -.5);
-}
-
-.col-2 {
-    flex-basis: 90%;
-    min-width: 30rem;
-    @include breakpoint(AsusZenfone5) {
-        margin-top: 40rem;
-    }
-}
-
-.col-2 img {
-    width: 50rem;
-    height: 35rem;
-    border-radius: 1.2rem;
-    box-shadow: 0px 0px 1rem black;
-    margin-right: 7rem;
-}
-
-.col-22 img {
-    width: 50rem;
-    height: 35rem;
-    border-radius: 1.2rem;
-    box-shadow: 0px 0px 1rem black;
-    margin-bottom: 7rem;
-}
-
-.col-2 h1 {
-    font-size: 7rem;
-    @include breakpoint(AsusZenfone5) {
-        font-size: 6.5rem;
-    }
-    line-height: 6rem;
-    margin: 2.5rem 0;
-}
-
-
-/* .btn{
-  display: inline-block;
-  background:black;
-  color: white;
-  padding: 0.8rem 3rem;
-  margin: 3rem 0;
-  border-radius: 3rem;
-} */
-
-
-/* .btn:hover {
-    background: rgba(160, 55, 55, 0.856);
-} */
-
-.header {
-    background: radial-gradient(#ffffff, #293f50);
-}
-
-.header .row {
-    margin-top: 7rem;
-}
-
-.categories {
-    margin: 7rem 0;
-}
-
-.col-3 {
-    flex-basis: 30%;
-    min-width: 25rem;
-    margin-bottom: 3rem;
-}
-
-.col-3 img {
-    width: 100%;
-    border-radius: 1.2rem;
-    box-shadow: 0px 0px 1rem black;
-    margin-bottom: 7rem;
-}
-
-.small-container {
-    max-width: 108rem;
-    margin: auto;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
-
-.col-4 {
-    flex-basis: 25%;
-    padding: 1rem;
-    min-width: 20rem;
-    margin-bottom: 5rem;
-    transition: transform 0.5s;
-    @include breakpoint(AsusZenfone5) {
-        flex-basis: 50%;
-    }
-}
-
-.col-4 img {
-    width: 100%;
-    height: 30rem;
-    border-radius: 1.2rem;
-    box-shadow: 0px 0px 1rem black;
-    margin-bottom: 3rem;
-    @include breakpoint(AsusZenfone5) {
-        width: none;
-    }
-}
-
-.title {
-    text-align: center;
-    margin: 0 auto 8rem;
-    position: relative;
-    line-height: 6rem;
-    color: #555555;
-}
-
-.title::after {
-    content: '';
-    background: #293f50;
-    width: 8rem;
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-h4 {
-    color: #555555;
-    font-weight: normal;
-}
-
-.col-4 p {
-    font-size: 1.4rem;
-}
-
-.rating .fa {
-    color: black;
-}
-
-.col-4:hover {
-    transform: translateY(-0.7rem);
-}
-
-.offer {
-    background: radial-gradient(#ffffff, #293f50);
-    margin-top: 8rem;
-    padding: 3rem 0;
-}
-
-.col-2 .offer-img {
-    padding: 5rem;
-}
-
-small {
-    color: #555555;
-}
-
-.testimonial {
-    padding-top: 10.8rem;
-}
-
-.testimonial .col-3 {
-    text-align: center;
-    padding: 4rem 2rem;
-    box-shadow: 0 0 2rem 0px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-
-.testimonial .col-3 img {
-    width: 5rem;
-    margin-top: 2rem;
-    border-radius: 50%;
-}
-
-.testimonial .col-3:hover {
-    transform: translateY(-1rem);
-}
-
-.fa.fa-quote-left {
-    font-size: 3.4rem;
-    color: black;
-}
-
-.col-3 p {
-    font-size: 2.2rem;
-    margin: 1.2rem 0;
-    color: #777777;
-    @include breakpoint (AsusZenfone5) {
-        font-size: 3.2rem;
-    }
-}
-
-.testimonial .col-3 h3 {
-    font-weight: 60rem;
-    color: #555555;
-    font-size: 1.8rem;
-    @include breakpoint(AsusZenfone5) {
-        font-size: 2.8rem;
-    }
-}
-
-.brands {
-    margin: 10rem auto;
-}
-
-.col-5 {
-    width: 16rem;
-}
-
-.col-5 img {
-    width: 100%;
-    cursor: pointer;
-    filter: grayscale(100%);
-}
-
-.col-5 img:hover {
-    filter: grayscale(0);
-}
-
-.footer {
-    background: black;
-    color: #8a8a8a;
-    font-size: 1.4rem;
-    padding: 6rem 0 2rem;
-    @include breakpoint(AsusZenfone5) {
-        font-size: 4.4rem;
-    }
-}
-
-.footer p {
-    color: #8a8a8a;
-}
-
-.footer h3 {
-    color: whitesmoke;
-}
-
-.footer-col-1,
-.footer-col-2,
-.footer-col-3,
-.footer-col-4 {
-    min-width: 25rem;
-    margin-bottom: 2rem;
-}
-
-.footer-col-1 {
-    flex-basis: 30%;
-}
-
-.footer-col-2 {
-    flex: 1;
-    text-align: center;
-}
-
-.footer-col-2 img {
-    width: 18rem;
-    margin-bottom: 2rem;
-    height: 3.9rem;
-}
-
-.footer-col-3,
-.footer-col-4 {
-    flex-basis: 12%;
-    text-align: center;
-}
-
-ul {
-    list-style: none;
-}
-
-.app-logo {
-    margin-top: 2rem;
-}
-
-.app-logo img {
-    width: 14rem;
-}
-
-.footer hr {
-    border: none;
-    background: #b5b5b5;
-    height: 0.1rem;
-    margin: 2rem 0;
-}
-
-.copyright {
-    text-align: center;
-}
-
-.menu-icon {
-    width: 2.8rem;
-    margin-left: 2rem;
-    display: none;
-    @include breakpoint(AsusZenfone5) {
-        display: block;
-        cursor: pointer;
-    }
-}
-
-.row-2 {
-    justify-content: space-between;
-    margin: 10rem auto 5rem;
-}
-
-select {
-    border: 0.1rem solid coral;
-    padding: 0.5rem;
-}
-
-select:focus {
-    outline: none;
-}
-
-.page-btn {
-    margin: 0 auto 8rem;
-}
-
-.page-btn span {
-    display: inline-block;
-    border: 0.1rem solid #faadbd;
-    margin-left: 1rem;
-    width: 4rem;
-    height: 4rem;
-    text-align: center;
-    line-height: 4rem;
-    cursor: pointer;
-}
-
-.page-btn span:hover {
-    background: #f1607d;
-    color: whitesmoke;
-}
-
-.single-product {
-    margin-top: 8rem;
-}
-
-.single-product .col-2 img {
-    padding: 0;
-}
-
-.single-product .col-2 {
-    padding: 2rem;
-}
-
-.single-product h4 {
-    margin: 2rem 0;
-    font-size: 2.2rem;
-    font-weight: bold;
-}
-
-.single-product select {
-    display: block;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-.single-product input {
-    width: 5rem;
-    height: 4rem;
-    padding-left: 1rem;
-    font-size: 2rem;
-    margin-right: 1rem;
-    border: 0.1rem solid coral;
-}
-
-input:focus {
-    outline: none;
-}
-
-.single-product .fa {
-    color: #f1607d;
-    margin-left: 1rem;
-}
-
-.small-img-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.small-img-col {
-    flex-basis: 24%;
-    cursor: pointer;
-}
-
-.cart-page {
-    margin: 8rem auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.cart-info {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-th {
-    text-align: left;
-    padding: 0.5rem;
-    color: #ffffff;
-    background: #ca4560;
-    font-weight: normal;
-}
-
-td {
-    padding: 1rem 0.5rem;
-}
-
-td input {
-    width: 4rem;
-    height: 3rem;
-    padding: 0.5rem;
-}
-
-td a {
-    color: #ff0033;
-    font-size: 1.2rem;
-}
-
-td img {
-    width: 8rem;
-    height: 8rem;
-    margin-right: 1rem;
-}
-
-.total-price {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.total-price table {
-    border-top: 0.3rem solid coral;
-    width: 100%;
-    max-width: 35rem;
-}
-
-td:last-child {
-    text-align: right;
-}
-
-th:last-child {
-    text-align: right;
-}
-
-.account-page {
-    padding: 5rem 0;
-    background: radial-gradient(#ffffff, #faadbd);
-}
-
-.form-container {
-    background: #ffffff;
-    width: 30rem;
-    height: 40rem;
-    position: relative;
-    text-align: center;
-    padding: 2rem 0;
-    margin: auto;
-    box-shadow: 0 0 2rem 0px rgba(0, 0, 0, 0.3);
-    border-radius: 0.9rem;
-    overflow: hidden;
-}
-
-.form-container span {
-    font-weight: bold;
-    padding: 0 1rem;
-    color: #555555;
-    cursor: pointer;
-    width: 10rem;
-    display: inline-block;
-}
-
-.form-btn {
-    display: inline-block;
-}
-
-.form-container form {
-    max-width: 30rem;
-    padding: 0 2rem;
-    position: absolute;
-    top: 13rem;
-    transition: transform 1s;
-}
-
-form input {
-    width: 100%;
-    height: 3rem;
-    margin: 1rem 0;
-    padding: 0 1rem;
-    border: 0.1rem solid #cccccc;
-}
-
-form .btn {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    margin: 1rem 0;
-}
-
-form .btn:focus {
-    outline: none;
-}
-
-#LoginForm {
-    left: -30rem;
-}
-
-#RegForm {
-    left: 0px;
-}
-
-form a {
-    font-size: 1.2rem;
-}
-
-#Indicator {
-    width: 10rem;
-    border: none;
-    background: coral;
-    height: 0.3rem;
-    margin-top: 0.8rem;
-    transform: translateX(10rem);
-    transition: transform 1s;
-}
+        
+        @import './breakpoint';
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .fa-shopping-basket {
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        .fa-home {
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        .fa-product-hunt {
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        .fa-address-card {
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        .fa-phone {
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        .fa-user-alt {
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        nav {
+            flex: 1;
+            text-align: left;
+        }
+        
+        nav ul {
+            display: inline-block;
+            list-style: none;
+            @include breakpoint(AsusZenfone5) {
+                position: absolute;
+                top: 7rem;
+                left: 0;
+                background: #333333;
+                opacity: 0.8;
+                width: 100%;
+                overflow: hidden;
+                transition: max-height 0.6s;
+            }
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-left: 2rem;
+            @include breakpoint(AsusZenfone5) {
+                display: block;
+                margin-bottom: 1rem;
+                margin-right: 5rem;
+                margin-top: 1rem;
+            }
+        }
+        
+        nav ul li a {
+            //font-weight: bold;
+            text-decoration: none;
+            color: #555555;
+            // margin-left: 5rem;
+            @include breakpoint(AsusZenfone5) {
+                color: whitesmoke;
+                font-size: 6rem;
+            }
+        }
+        
+        p {
+            color: #555555;
+        }
+        
+        .container {
+            margin: auto;
+            max-width: 180rem;
+            width: 100%;
+            // height: 100%;
+            //text-align: center;
+            position: relative;
+            // padding-left: 6rem;
+            // padding-right: 6rem;
+        }
+        
+        .row2 {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 85%;
+            margin: 0 auto;
+            col-2 {
+                margin-top: 5rem;
+            }
+            p {
+                margin-bottom: 0rem;
+                font-size: 2rem;
+            }
+            @include small {
+                display: flex;
+                flex-direction: column;
+                .col-2 {
+                    margin-top: 51rem;
+                    margin-bottom: 3rem;
+                    order: 1;
+                }
+                .col-22 {
+                    order: 2;
+                }
+                p {
+                    order: 3;
+                    font-size: 5rem;
+                }
+                a {
+                    order: 4;
+                    font-size: 7rem;
+                }
+            }
+        }
+        
+        .row {
+            //  --bs-gutter-x: 1.5rem;
+            --qualquercoisa: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .col-2 img {
+            width: 50rem;
+            height: 35rem;
+            border-radius: 1.2rem;
+            box-shadow: 0px 0px 1rem black;
+            margin-right: 7rem;
+        }
+        
+        .col-22 {
+            align-items: center;
+            grid-column: 2;
+            grid-row: 1 / span 3;
+        }
+        
+        .col-22 img {
+            width: 55rem;
+            height: 40rem;
+            border-radius: 1.2rem;
+            box-shadow: 0px 0px 1rem black;
+            margin-bottom: 7rem;
+            @include small {
+                width: 75rem;
+                height: 60rem;
+            }
+        }
+        
+        .col-2 {
+            width: 100%;
+            display: block;
+            h1 {
+                font-size: 4.5rem;
+                text-align: left;
+                text-justify: center;
+                @include small {
+                    font-size: 6.5rem;
+                    margin-top: 0.2rem;
+                }
+                line-height: 6rem;
+                //margin-left: 10rem;
+            }
+        }
+        
+        .btn {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 0.8rem 3rem;
+            margin: 3rem 0;
+            border-radius: 3rem;
+            font-size: 2rem;
+            @include breakpoint(AsusZenfone5) {
+                font-size: 5rem;
+            }
+        }
+        
+        .btn:hover {
+            background: rgba(160, 55, 55, 0.856);
+        }
+        
+        .header {
+            background: radial-gradient(#ffffff, #293f50);
+        }
+        
+        .header .row {
+            margin-top: 7rem;
+        }
+        
+        .categories {
+            margin: 7rem 0;
+        }
+        
+        .col-3 {
+            flex-basis: 30%;
+            min-width: 25rem;
+            margin-bottom: 3rem;
+        }
+        
+        .col-3 img {
+            width: 100%;
+            border-radius: 1.2rem;
+            box-shadow: 0px 0px 1rem black;
+            margin-bottom: 7rem;
+        }
+        
+        .small-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .col-4 {
+            flex-basis: 25%;
+            padding: 1rem;
+            min-width: 20rem;
+            margin-bottom: 5rem;
+            transition: transform 0.5s;
+            @include breakpoint(AsusZenfone5) {
+                flex-basis: 50%;
+            }
+        }
+        
+        .col-4 img {
+            width: 100%;
+            height: 30rem;
+            border-radius: 1.2rem;
+            box-shadow: 0px 0px 1rem black;
+            margin-bottom: 3rem;
+            @include breakpoint(AsusZenfone5) {
+                width: none;
+            }
+        }
+        
+        .title {
+            text-align: center;
+            margin: 0 auto 8rem;
+            position: relative;
+            line-height: 6rem;
+            color: #555555;
+        }
+        
+        .title::after {
+            content: '';
+            background: #293f50;
+            width: 8rem;
+            height: 0.5rem;
+            border-radius: 0.5rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h4 {
+            color: #555555;
+            font-weight: normal;
+        }
+        
+        .col-4 p {
+            font-size: 1.4rem;
+        }
+        
+        .rating .fa {
+            color: black;
+        }
+        
+        .col-4:hover {
+            transform: translateY(-0.7rem);
+        }
+        
+        .offer {
+            width: 100%;
+            background: radial-gradient(#ffffff, #293f50);
+            margin-top: 8rem;
+            padding: 3rem 0;
+            @include small {
+                display: block;
+                // flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        .offer-main {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            gap: 0 2rem;
+            //align-items: center;
+            @include small {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                justify-content: center;
+            }
+        }
+        
+        .offer-main-img {
+            grid-column: 1 / 1;
+            grid-row: 1 / span 3;
+            img {
+                border-radius: 1.2rem;
+                box-shadow: 0px 0px 1rem black;
+            }
+            @include small {
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                //margin: 0.5rem;
+                // padding: 0.5rem;
+                img {
+                    max-width: 100%;
+                    width: 70rem;
+                    height: 55rem;
+                    align-items: center;
+                    border-radius: 1.2rem;
+                    box-shadow: 0px 0px 10px black;
+                }
+            }
+        }
+        
+        .offer-main-title {
+            display: flex;
+            flex-direction: column;
+            grid-column: 2 / 2;
+            font-size: 5rem;
+            gap: 2rem;
+            // margin: 0.5rem;
+            //padding: 0.5rem;
+            @include small {
+                // width: 90%;
+                margin: 0 auto;
+                order: -1;
+                display: flex;
+                flex-direction: column;
+                // flex-grow: 1;
+                justify-content: center;
+                p {
+                    font-size: 5rem;
+                }
+            }
+            P {
+                font-size: 4rem;
+            }
+            h1 {
+                font-size: 5.5rem;
+            }
+        }
+        
+        .offer-main-text {
+            width: 90%;
+            font-size: 2rem;
+            @include small {
+                font-size: 5rem;
+            }
+        }
+        
+        .offer-main-btn {
+            grid-column: 2 / 2;
+            a {
+                font-size: 2.5rem;
+                @include small {
+                    font-size: 10rem;
+                }
+            }
+        }
+        
+        .col-2 .offer-img {
+            padding: 5rem;
+        }
+        
+        small {
+            color: #555555;
+        }
+        
+        .testimonial {
+            padding-top: 10.8rem;
+        }
+        
+        .testimonial .col-3 {
+            text-align: center;
+            padding: 4rem 2rem;
+            box-shadow: 0 0 2rem 0px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+        
+        .testimonial .col-3 img {
+            width: 5rem;
+            margin-top: 2rem;
+            border-radius: 50%;
+        }
+        
+        .testimonial .col-3:hover {
+            transform: translateY(-1rem);
+        }
+        
+        .fa.fa-quote-left {
+            font-size: 3.4rem;
+            color: black;
+        }
+        
+        .col-3 p {
+            font-size: 2.2rem;
+            margin: 1.2rem 0;
+            color: #777777;
+            @include breakpoint (AsusZenfone5) {
+                font-size: 3.2rem;
+            }
+        }
+        
+        .testimonial .col-3 h3 {
+            font-weight: 60rem;
+            color: #555555;
+            font-size: 1.8rem;
+            @include breakpoint(AsusZenfone5) {
+                font-size: 2.8rem;
+            }
+        }
+        
+        .brands {
+            margin: 10rem auto;
+        }
+        
+        .col-5 {
+            width: 16rem;
+        }
+        
+        .col-5 img {
+            width: 100%;
+            cursor: pointer;
+            filter: grayscale(100%);
+        }
+        
+        .col-5 img:hover {
+            filter: grayscale(0);
+        }
+        
+        .footer {
+            background: black;
+            color: #8a8a8a;
+            font-size: 1.4rem;
+            padding: 6rem 0 2rem;
+            @include breakpoint(AsusZenfone5) {
+                font-size: 4.4rem;
+            }
+        }
+        
+        .footer p {
+            color: #8a8a8a;
+        }
+        
+        .footer h3 {
+            color: whitesmoke;
+        }
+        
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3,
+        .footer-col-4 {
+            min-width: 25rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col-1 {
+            flex-basis: 30%;
+        }
+        
+        .footer-col-2 {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .footer-col-2 img {
+            width: 18rem;
+            margin-bottom: 2rem;
+            height: 3.9rem;
+        }
+        
+        .footer-col-3,
+        .footer-col-4 {
+            flex-basis: 12%;
+            text-align: center;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .app-logo {
+            margin-top: 2rem;
+        }
+        
+        .app-logo img {
+            width: 14rem;
+        }
+        
+        .footer hr {
+            border: none;
+            background: #b5b5b5;
+            height: 0.1rem;
+            margin: 2rem 0;
+        }
+        
+        .copyright {
+            text-align: center;
+        }
+        
+        .menu-icon {
+            width: 2.8rem;
+            margin-left: 2rem;
+            display: none;
+            @include breakpoint(AsusZenfone5) {
+                display: block;
+                cursor: pointer;
+            }
+        }
+        
+        select {
+            border: 0.1rem solid coral;
+            padding: 0.5rem;
+        }
+        
+        select:focus {
+            outline: none;
+        }
+        
+        .page-btn {
+            margin: 0 auto 8rem;
+        }
+        
+        .page-btn span {
+            display: inline-block;
+            border: 0.1rem solid #faadbd;
+            margin-left: 1rem;
+            width: 4rem;
+            height: 4rem;
+            text-align: center;
+            line-height: 4rem;
+            cursor: pointer;
+        }
+        
+        .page-btn span:hover {
+            background: #f1607d;
+            color: whitesmoke;
+        }
+        
+        .single-product {
+            margin-top: 8rem;
+        }
+        
+        .single-product .col-2 img {
+            padding: 0;
+        }
+        
+        .single-product .col-2 {
+            padding: 2rem;
+        }
+        
+        .single-product h4 {
+            margin: 2rem 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+        
+        .single-product select {
+            display: block;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .single-product input {
+            width: 5rem;
+            height: 4rem;
+            padding-left: 1rem;
+            font-size: 2rem;
+            margin-right: 1rem;
+            border: 0.1rem solid coral;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        .single-product .fa {
+            color: #f1607d;
+            margin-left: 1rem;
+        }
+        
+        .small-img-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .small-img-col {
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+        
+        .cart-page {
+            margin: 8rem auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        th {
+            text-align: left;
+            padding: 0.5rem;
+            color: #ffffff;
+            background: #ca4560;
+            font-weight: normal;
+        }
+        
+        td {
+            padding: 1rem 0.5rem;
+        }
+        
+        td input {
+            width: 4rem;
+            height: 3rem;
+            padding: 0.5rem;
+        }
+        
+        td a {
+            color: #ff0033;
+            font-size: 1.2rem;
+        }
+        
+        td img {
+            width: 8rem;
+            height: 8rem;
+            margin-right: 1rem;
+        }
+        
+        .total-price {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .total-price table {
+            border-top: 0.3rem solid coral;
+            width: 100%;
+            max-width: 35rem;
+        }
+        
+        td:last-child {
+            text-align: right;
+        }
+        
+        th:last-child {
+            text-align: right;
+        }
+        
+        .account-page {
+            padding: 5rem 0;
+            background: radial-gradient(#ffffff, #faadbd);
+        }
+        
+        .form-container {
+            background: #ffffff;
+            //width: 30rem;
+            height: 40rem;
+            position: relative;
+            text-align: center;
+            padding: 2rem 0;
+            margin: auto;
+            box-shadow: 0 0 2rem 0px rgba(0, 0, 0, 0.3);
+            border-radius: 0.9rem;
+            overflow: hidden;
+        }
+        
+        .form-container span {
+            font-weight: bold;
+            padding: 0 1rem;
+            color: #555555;
+            cursor: pointer;
+            width: 10rem;
+            display: inline-block;
+        }
+        
+        .form-btn {
+            display: inline-block;
+        }
+        
+        .form-container form {
+            max-width: 30rem;
+            padding: 0 2rem;
+            position: absolute;
+            top: 13rem;
+            transition: transform 1s;
+        }
+        
+        form input {
+            width: 100%;
+            height: 3rem;
+            margin: 1rem 0;
+            padding: 0 1rem;
+            border: 0.1rem solid #cccccc;
+        }
+        
+        form .btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            margin: 1rem 0;
+        }
+        
+        form .btn:focus {
+            outline: none;
+        }
+        
+        #LoginForm {
+            left: -30rem;
+        }
+        
+        #RegForm {
+            left: 0px;
+        }
+        
+        form a {
+            font-size: 1.2rem;
+        }
+        
+        #Indicator {
+            width: 10rem;
+            border: none;
+            background: coral;
+            height: 0.3rem;
+            margin-top: 0.8rem;
+            transform: translateX(10rem);
+            transition: transform 1s;
+        }

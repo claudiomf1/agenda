@@ -1,5 +1,11 @@
 /* Var para responsive */
 
+@mixin small {
+    @media screen and (max-device-width: 600px) {
+        @content;
+    }
+}
+
 @mixin breakpoint($point) {
     @if $point==AsusZenfone5 {
         @media only screen and (max-device-width: 50rem) {
