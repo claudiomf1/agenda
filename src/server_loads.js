@@ -9,3 +9,8 @@ const LoadHearders = () => {
 const loadLogin = () => {
     return loadPartialHTML("page-login");
 }
+
+const loadHeaderAdmin = () => {
+    alert("loadHeaderAdmin");
+    return loadPartialHTML("page-header-main-dash");
+}
