@@ -22,7 +22,7 @@ export const LoadHeard = (options) => {
 
         function() {} :
         options.callback;
-    alert("func:" + options.func);
+
 
     google.script.run
         .withSuccessHandler(function(html) {

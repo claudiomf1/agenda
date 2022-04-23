@@ -1,4 +1,4 @@
-import { LoadInit, LoadHeard, LoadFooter, LoadHprincipal, } from './pages/pages'
+import { LoadInit, LoadHeard, LoadFooter, LoadHprincipal } from './pages/pages'
 import { cPrincipal } from './main'
 
 export const callHearder = () => {
@@ -15,5 +15,11 @@ export const callLogin = () => {
 }
 
 export const callHprincipal = () => {
+
     LoadHeard({ func: "loadHeaderAdmin" /* , callback: cPrincipal() */ });
+
+}
+
+export const callManutencao = () => {
+    LoadInit({ func: "loadManutencao" });
 }

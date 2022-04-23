@@ -9,7 +9,7 @@ const loginSv = (inputs) => {
     const ultLinhaLog = bdlogin.getLastRow() - 1
     const idLg = ultLinhaLog
     let userDataIndex = -1
-    let logado = "Logado"
+    let logado = "On"
 
     let len
     let p = 0

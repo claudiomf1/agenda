@@ -4,6 +4,8 @@ const loadBody = () => {
 
 const LoadHearders = () => {
     return loadPartialHTML("page-header-index");
+
+
 }
 
 const loadLogin = () => {
@@ -11,6 +13,10 @@ const loadLogin = () => {
 }
 
 const loadHeaderAdmin = () => {
-    alert("loadHeaderAdmin");
+
     return loadPartialHTML("page-header-main-dash");
+}
+
+const loadManutencao = () => {
+    return loadPartialHTML("page-construction");
 }

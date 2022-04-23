@@ -1,4 +1,4 @@
-import { callHearder, callBody, callLogin, callHprincipal } from './caldpages'
+import { callHearder, callBody, callLogin, callHprincipal, callManutencao } from './caldpages'
 
 
 
@@ -37,7 +37,7 @@ const btnClick = (e) => {
         callLogin();
         //$("#title-page").html("Login")
         // $("#bar").hide()
-        //alert('Teste clicando em login')
+        //alert('Teste clicando em login') 
 
     }
 
@@ -73,7 +73,7 @@ const loginAut = () => {
     //$("#bar").show()
     const inputNome = document.getElementById("username")
     const inputPswd = document.getElementById("password")
-    alert(inputPswd.value);
+
     var inputs = {
         users: inputNome.value,
         paswds: inputPswd.value
@@ -94,7 +94,7 @@ function lookLogin(options) {
 
 
     console.log(optRet, pp)
-        // alert("optRet:" + optRet + " pp:" + pp)
+
 
     if (optRet === pp) {
 
@@ -103,10 +103,10 @@ function lookLogin(options) {
         localStorage.setItem('iduser', iduser)
         localStorage.setItem('email', userEmail)
         localStorage.setItem('permissao', userPremissao)
-            // alert("antes do callHprincipal");
-            // callManutencao()
-
+        alert(userEmail);
+        callManutencao()
         callHprincipal()
+
         $("#bar").hide()
     } else {
         $(mensagemL).html("Usuário ou senha invalidos.")
@@ -121,13 +121,13 @@ export function cPrincipal() {
 }
 
 function lookPrincipal() {
-    alert("lookPrincipal")
+
     const nomeUsuario = localStorage.getItem('nomeuser')
     const idUsuario = localStorage.getItem('iduser')
     const usEmail = localStorage.getItem('email')
     const usPermis = localStorage.getItem('permissao')
 
-
+    alert(nomeUsuario)
 
     $("#Nuser").html(nomeUsuario)
 
@@ -137,6 +137,6 @@ function lookPrincipal() {
 }
 
 function retPrincipal() {
-    alert("retPrincipal")
+
     return;
 }
