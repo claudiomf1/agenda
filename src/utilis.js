@@ -8,7 +8,7 @@ function render(file, argoObject) {
         });
     } //end if
     return template.evaluate().setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
-        //.addMetaTag('viewport', 'width=device-width, initial-scale=1')
+        .addMetaTag('viewport', 'width=device-width, initial-scale=1')
         .setTitle("Modelagem- Home")
         .setFaviconUrl('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Paris_RER_D_icon.svg/51.2rem-Paris_RER_D_icon.svg.png')
 }

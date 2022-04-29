@@ -6,8 +6,6 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -1473,7 +1471,20 @@ var callManutencao = function callManutencao() {
 };
 
 exports.callManutencao = callManutencao;
-},{"./pages/pages":"jMUm","./main":"d6sW"}],"d6sW":[function(require,module,exports) {
+},{"./pages/pages":"jMUm","./main":"d6sW"}],"pjbJ":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.lookDesLg = void 0;
+
+var lookDesLg = function lookDesLg(options) {
+  alert("passou o deslog");
+};
+
+exports.lookDesLg = lookDesLg;
+},{}],"d6sW":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1482,6 +1493,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.cPrincipal = cPrincipal;
 
 var _caldpages = require("./caldpages");
+
+var _deslogusr = require("./scripts/deslogusr.js");
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("heard-index").addEventListener('click', btnClick);
@@ -1492,6 +1505,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.onload = function () {
+  desLogUsr();
   (0, _caldpages.callBody)();
 };
 
@@ -1558,7 +1572,6 @@ function lookLogin(options) {
     localStorage.setItem('iduser', iduser);
     localStorage.setItem('email', userEmail);
     localStorage.setItem('permissao', userPremissao);
-    alert(userEmail);
     (0, _caldpages.callManutencao)();
     (0, _caldpages.callHprincipal)();
     $("#bar").hide();
@@ -1587,7 +1600,12 @@ function lookPrincipal() {
 function retPrincipal() {
   return;
 }
-},{"./caldpages":"CwAk"}]},{},["d6sW"], null)</script>
+
+var desLogUsr = function desLogUsr() {
+  $("#bar").show();
+  google.script.run.withSuccessHandler((0, _deslogusr.lookDesLg)()).deslogUser();
+};
+},{"./caldpages":"CwAk","./scripts/deslogusr.js":"pjbJ"}]},{},["d6sW"], null)</script>
 </body>
 
 </html>

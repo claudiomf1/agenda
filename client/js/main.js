@@ -1,5 +1,5 @@
 import { callHearder, callBody, callLogin, callHprincipal, callManutencao } from './caldpages'
-
+import { lookDesLg } from './scripts/deslogusr.js'
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("body-home").addEventListener("change", btnChange)
 
     $("#bar").hide()
-
+ 
 })
 
 window.onload = function() {
-
-    callBody()
-
+  desLogUsr()
+  callBody()
 }
+    
 
 
 
@@ -103,7 +103,7 @@ function lookLogin(options) {
         localStorage.setItem('iduser', iduser)
         localStorage.setItem('email', userEmail)
         localStorage.setItem('permissao', userPremissao)
-        alert(userEmail);
+       
         callManutencao()
         callHprincipal()
 
@@ -140,3 +140,13 @@ function retPrincipal() {
 
     return;
 }
+
+
+
+const desLogUsr = () => {
+
+
+  $("#bar").show()
+  google.script.run.withSuccessHandler(lookDesLg()).deslogUser()
+
+ }

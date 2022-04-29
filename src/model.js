@@ -9,6 +9,7 @@ var wcs = sb.getSheetByName("cadastroServico")
 /*user*/
 var wus = su.getSheetByName("user")
 var wul = su.getSheetByName("login")
+var wud = su.getSheetByName("datalog")
 
 
 var chave = "sdfsdf09f789sdf78sdf3453sdfsdhnxd9849sdf78sdf3453sdhhpwewemzxer849958sdf3453sdfsdf0pxneodf3453vcchinb94V5948527784HdmeXXxrime38994000303030272663677882lmsoekkowjhgowsermkelwsecvcrendAAA0w0w0oMMheower352342odllBBroenowerm3859990003020094933284773uyemkeot23"
