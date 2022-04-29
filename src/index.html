@@ -1471,20 +1471,7 @@ var callManutencao = function callManutencao() {
 };
 
 exports.callManutencao = callManutencao;
-},{"./pages/pages":"jMUm","./main":"d6sW"}],"pjbJ":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.lookDesLg = void 0;
-
-var lookDesLg = function lookDesLg(options) {
-  alert("passou o deslog");
-};
-
-exports.lookDesLg = lookDesLg;
-},{}],"d6sW":[function(require,module,exports) {
+},{"./pages/pages":"jMUm","./main":"d6sW"}],"d6sW":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1493,8 +1480,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.cPrincipal = cPrincipal;
 
 var _caldpages = require("./caldpages");
-
-var _deslogusr = require("./scripts/deslogusr.js");
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("heard-index").addEventListener('click', btnClick);
@@ -1603,9 +1588,20 @@ function retPrincipal() {
 
 var desLogUsr = function desLogUsr() {
   $("#bar").show();
-  google.script.run.withSuccessHandler((0, _deslogusr.lookDesLg)()).deslogUser();
+  google.script.run.withSuccessHandler(lookDesLg).deslogUser();
 };
-},{"./caldpages":"CwAk","./scripts/deslogusr.js":"pjbJ"}]},{},["d6sW"], null)</script>
+
+function lookDesLg(options) {
+  var rt = options;
+  console.log(options);
+
+  if (rt === "Logado") {
+    alert('Tudo certo, vamos abrir a page principal');
+  } else {
+    alert('Opa! Vamos delogar o user, e abrir o home');
+  }
+}
+},{"./caldpages":"CwAk"}]},{},["d6sW"], null)</script>
 </body>
 
 </html>

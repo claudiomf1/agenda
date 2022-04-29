@@ -61,10 +61,8 @@ const loginSv = (inputs) => {
             idUsers,
             tokenServ,
             logado,
-            todayT,
-            Dia,
-            Mes,
-            Ano
+            todayT
+            
         ])
         return {
             userId: idUsers,

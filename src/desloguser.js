@@ -3,7 +3,7 @@ const deslogUser = () =>{
   let dataLogger = wud //data
   let dataLogin = wul //login
   let lr = dataLogin.getLastRow()
-  Logger.log(lr)
+ 
 
   const result = dataLogger.getRange("C2").getValue()
 
@@ -17,7 +17,7 @@ const deslogUser = () =>{
 
   if(result === true ){
 
-    return "Logado"
+    return "Logado" 
 
   }else{
 
@@ -53,7 +53,7 @@ const deslogUser = () =>{
     dataLogin.getRange('D2:D').activate()
     dataLogin.getActiveRangeList().setValue("Off")
 
-    return "Deslogou"
+    return "Deslogou" 
 
 
     

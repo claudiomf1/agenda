@@ -6,7 +6,7 @@ export const callHearder = () => {
 }
 
 export const callBody = () => {
-    LoadInit({ func: "loadBody" });
+    LoadInit({ func: "loadBody", });
 }
 
 export const callLogin = () => {

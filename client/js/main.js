@@ -1,12 +1,12 @@
 import { callHearder, callBody, callLogin, callHprincipal, callManutencao } from './caldpages'
-import { lookDesLg } from './scripts/deslogusr.js'
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("heard-index").addEventListener('click', btnClick)
-    document.getElementById("body-home").addEventListener('click', btnClick)
-    document.getElementById("body-home").addEventListener("input", btnInput)
-    document.getElementById("body-home").addEventListener("change", btnChange)
+document.getElementById("heard-index").addEventListener('click', btnClick)
+document.getElementById("body-home").addEventListener('click', btnClick)
+document.getElementById("body-home").addEventListener("input", btnInput)
+document.getElementById("body-home").addEventListener("change", btnChange)
 
     $("#bar").hide()
  
@@ -147,6 +147,23 @@ const desLogUsr = () => {
 
 
   $("#bar").show()
-  google.script.run.withSuccessHandler(lookDesLg()).deslogUser()
+  google.script.run.withSuccessHandler(lookDesLg).deslogUser()
 
  }
+
+ function lookDesLg (options) { 
+
+  const rt = options
+  console.log(options)
+
+    if(rt === "Logado"){
+
+      alert('Tudo certo, vamos abrir a page principal')
+
+    }else {
+
+      alert('Opa! Vamos delogar o user, e abrir o home')
+
+    }
+
+}
