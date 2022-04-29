@@ -3,20 +3,20 @@ import { callHearder, callBody, callLogin, callHprincipal, callManutencao } from
 
 
 document.addEventListener("DOMContentLoaded", function() {
-document.getElementById("heard-index").addEventListener('click', btnClick)
-document.getElementById("body-home").addEventListener('click', btnClick)
-document.getElementById("body-home").addEventListener("input", btnInput)
-document.getElementById("body-home").addEventListener("change", btnChange)
+    document.getElementById("heard-index").addEventListener('click', btnClick)
+    document.getElementById("body-home").addEventListener('click', btnClick)
+        // document.getElementById("body-home").addEventListener("input", btnInput)
+        // document.getElementById("body-home").addEventListener("change", btnChange)
 
     $("#bar").hide()
- 
+
 })
 
 window.onload = function() {
-  desLogUsr()
-  callBody()
+    desLogUsr()
+    callBody()
 }
-    
+
 
 
 
@@ -103,7 +103,7 @@ function lookLogin(options) {
         localStorage.setItem('iduser', iduser)
         localStorage.setItem('email', userEmail)
         localStorage.setItem('permissao', userPremissao)
-       
+
         callManutencao()
         callHprincipal()
 
@@ -146,23 +146,23 @@ function retPrincipal() {
 const desLogUsr = () => {
 
 
-  $("#bar").show()
-  google.script.run.withSuccessHandler(lookDesLg).deslogUser()
+    $("#bar").show()
+    google.script.run.withSuccessHandler(lookDesLg).deslogUser()
 
- }
+}
 
- function lookDesLg (options) { 
+function lookDesLg(options) {
 
-  const rt = options
-  console.log(options)
+    const rt = options
+    console.log(options)
 
-    if(rt === "Logado"){
+    if (rt === "Logado") {
 
-      alert('Tudo certo, vamos abrir a page principal')
+        alert('Tudo certo, vamos abrir a page principal')
 
-    }else {
+    } else {
 
-      alert('Opa! Vamos delogar o user, e abrir o home')
+        alert('Opa! Vamos delogar o user, e abrir o home')
 
     }
 
