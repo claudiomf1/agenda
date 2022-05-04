@@ -85,18 +85,17 @@ const TokenStatus = (token) => {
     const bdlogin = wul
     const dataToken = bdlogin.getRange(2, 3, bdlogin.getLastRow() - 1, 3).getValues()
 
-
-    let userData
     dataToken.filter((check, index) => {
 
         if (check[0] === token) {
-            //console.log("token navegador " + token + " Token banco de dado " + check[0])
-            userData = true
-            return true;
+            
+            
+            return { retToke: true }
+
         } else {
-            userData = false;
-            userData = false;
+
+          return { retToke: false }
         }
     });
-    return userData
+    
 }
