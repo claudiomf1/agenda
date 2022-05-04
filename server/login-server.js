@@ -9,6 +9,7 @@ const loginSv = (inputs) => {
     const ultLinhaLog = bdlogin.getLastRow() - 1
     const idLg = ultLinhaLog
     let userDataIndex = -1
+    let userTokeIndex = -1
     let logado = "On"
 
     let len
@@ -88,14 +89,24 @@ const TokenStatus = (token) => {
     dataToken.filter((check, index) => {
 
         if (check[0] === token) {
+
+            userTokeIndex = index +1
             
-            
-            return { retToke: true }
+            return true 
 
         } else {
 
-          return { retToke: false }
+          return false 
         }
     });
+
+
+    if(userTokenIndex !== -1){
+
+        return true
+
+    }else{
+        return false
+    }
     
 }
