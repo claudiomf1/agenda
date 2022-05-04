@@ -31,7 +31,7 @@ const loginSv = (inputs) => {
         senhaLogin += (CHAR(len))
     }
 
-    console.log(senhaLogin)
+    Logger.log("Senha Login " + senhaLogin)
 
 
     const dataUser = bduser.getRange(2, 1, bduser.getLastRow() - 1, 7).getValues()
@@ -40,7 +40,6 @@ const loginSv = (inputs) => {
     let userData = dataUser.filter((check, index) => {
         if (check[1] === nomeuser && check[3] === senhaLogin && check[6] === status) {
             userDataIndex = index + 1
-
 
             return true;
         } else {
@@ -62,7 +61,7 @@ const loginSv = (inputs) => {
             tokenServ,
             logado,
             todayT
-            
+
         ])
         return {
             userId: idUsers,
@@ -80,4 +79,24 @@ const loginSv = (inputs) => {
         }
     }
 
+}
+
+const TokenStatus = (token) => {
+    const bdlogin = wul
+    const dataToken = bdlogin.getRange(2, 3, bdlogin.getLastRow() - 1, 3).getValues()
+
+
+    let userData
+    dataToken.filter((check, index) => {
+
+        if (check[0] === token) {
+            //console.log("token navegador " + token + " Token banco de dado " + check[0])
+            userData = true
+            return true;
+        } else {
+            userData = false;
+            userData = false;
+        }
+    });
+    return userData
 }

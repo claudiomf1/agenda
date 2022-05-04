@@ -11,17 +11,18 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#bar").hide()
 
 })
-
+var statuslog = ""
 window.onload = function() {
-    desLogUsr()
-    callBody()
+    // alert("Passo 0" + statuslog)
+    desLogUsr() // Passo 1 esta dentro dessa funcao desLogUsr
+        // alert("Passo 2" + statuslog)
+    if (statuslog !== "Logado") {
+        //    alert("Passo 3" + statuslog)
+        callBody()
+    }
+    tokenSt()
+
 }
-
-
-
-
-
-
 
 const btnClick = (e) => {
 
@@ -141,7 +142,18 @@ function retPrincipal() {
     return;
 }
 
+const tokenSt = () => {
+    let token = localStorage.getItem('token')
+    alert("Token :" + token)
+    google.script.run.withSuccessHandler(tokenStat).TokenStatus(token)
+}
 
+
+function tokenStat(token) {
+    let statusToken = token
+    alert("Status token: " + statusToken)
+    return statusToken
+}
 
 const desLogUsr = () => {
 
@@ -149,13 +161,14 @@ const desLogUsr = () => {
     $("#bar").show()
     google.script.run.withSuccessHandler(lookDesLg).deslogUser()
 
+
 }
+
 
 function lookDesLg(options) {
 
     const rt = options
     console.log(options)
-
     if (rt === "Logado") {
 
         alert('Tudo certo, vamos abrir a page principal')
@@ -165,5 +178,7 @@ function lookDesLg(options) {
         alert('Opa! Vamos delogar o user, e abrir o home')
 
     }
+    statuslog = rt
+        //alert("passo 1 " + statuslog)
 
 }

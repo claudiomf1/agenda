@@ -1,14 +1,12 @@
-
-var todayT = Utilities.formatDate(new Date(),"GMT-0300","dd/MM/yyyy' 'HH:mm:ss"
-);
-var today = Utilities.formatDate(new Date(), "GMT-0300", "dd/MM/yyyy");
+var todayT = Utilities.formatDate(new Date(), "GMT-0300", "yyyy/MM/dd' 'HH:mm:ss");
+var today = Utilities.formatDate(new Date(), "GMT-0300", "yyyy/MM/dd");
 
 var Ano = Utilities.formatDate(new Date(), "GMT-0300", "yyyy");
 var Mes = Utilities.formatDate(new Date(), "GMT-0300", "MM");
 var Dia = Utilities.formatDate(new Date(), "GMT-0300", "dd");
 var horaminut = Utilities.formatDate(new Date(), "GMT-0300", "HH:mm:ss");
 
-var tUsaH  = Utilities.formatDate(new Date(), "GMT-0300", "yyyy-MM-dd' 'HH:mm:ss")
+var tUsaH = Utilities.formatDate(new Date(), "GMT-0300", "yyyy-MM-dd' 'HH:mm:ss")
 
 var dateAm = new Date();
 
