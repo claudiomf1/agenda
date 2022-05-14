@@ -24,6 +24,11 @@ window.onload = function() {
 
 }
 
+const pagePrincipal = () =>  {
+  callManutencao()
+  callHprincipal()
+}
+
 const btnClick = (e) => {
 
     let inputNome = document.getElementById("username")
@@ -105,8 +110,7 @@ function lookLogin(options) {
         localStorage.setItem('email', userEmail)
         localStorage.setItem('permissao', userPremissao)
 
-        callManutencao()
-        callHprincipal()
+        pagePrincipal()
 
         $("#bar").hide()
     } else {
@@ -148,11 +152,8 @@ const tokenSt = () => {
     google.script.run.withSuccessHandler(tokenStat).TokenStatus(token)
 }
 
-
-function tokenStat(token) {
-    let statusToken = token
-    alert("Status token: " + statusToken)
-    return statusToken
+callBodyken: " + statusToken)
+  return statusToken
 }
 
 const desLogUsr = () => {
@@ -171,14 +172,16 @@ function lookDesLg(options) {
     console.log(options)
     if (rt === "Logado") {
 
-        alert('Tudo certo, vamos abrir a page principal')
+        pagePrincipal()
 
     } else {
 
-        alert('Opa! Vamos delogar o user, e abrir o home')
+        callBody()
 
     }
-    statuslog = rt
+
+
+    //statuslog = rt
         //alert("passo 1 " + statuslog)
 
 }
