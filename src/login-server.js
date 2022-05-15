@@ -9,6 +9,7 @@ const loginSv = (inputs) => {
     const ultLinhaLog = bdlogin.getLastRow() - 1
     const idLg = ultLinhaLog
     let userDataIndex = -1
+    let userTokeIndex = -1
     let logado = "On"
 
     let len
@@ -85,18 +86,27 @@ const TokenStatus = (token) => {
     const bdlogin = wul
     const dataToken = bdlogin.getRange(2, 3, bdlogin.getLastRow() - 1, 3).getValues()
 
-
-    let userData
     dataToken.filter((check, index) => {
 
         if (check[0] === token) {
-            //console.log("token navegador " + token + " Token banco de dado " + check[0])
-            userData = true
-            return true;
+
+            userTokeIndex = index +1
+            
+            return true 
+
         } else {
-            userData = false;
-            userData = false;
+
+          return false 
         }
     });
-    return userData
+
+
+    if(userTokenIndex !== -1){
+
+        return true
+
+    }else{
+        return false
+    }
+    
 }

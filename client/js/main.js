@@ -148,13 +148,12 @@ function retPrincipal() {
 
 const tokenSt = () => {
     let token = localStorage.getItem('token')
-    alert("Token :" + token)
+    //alert("Token :" + token)
     google.script.run.withSuccessHandler(tokenStat).TokenStatus(token)
 }
 
-callBodyken: " + statusToken)
-  return statusToken
-}
+
+
 
 const desLogUsr = () => {
 
@@ -172,16 +171,15 @@ function lookDesLg(options) {
     console.log(options)
     if (rt === "Logado") {
 
-        pagePrincipal()
+      pagePrincipal()
+       
 
     } else {
 
-        callBody()
+     
+      callBody()
 
     }
 
-
-    //statuslog = rt
-        //alert("passo 1 " + statuslog)
 
 }
