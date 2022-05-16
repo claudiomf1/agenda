@@ -11,7 +11,7 @@ export const callBody = () => {
 
 export const callLogin = () => {
     LoadInit({ func: "loadLogin" });
-    //$("#body-init").hide()
+    
 }
 
 export const callHprincipal = () => {

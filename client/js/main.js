@@ -12,12 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 var statuslog = ""
+var Token
 window.onload = function() {
-    // alert("Passo 0" + statuslog)
-    desLogUsr() // Passo 1 esta dentro dessa funcao desLogUsr
-        // alert("Passo 2" + statuslog)
+    
+    desLogUsr() 
+      
     if (statuslog !== "Logado") {
-        //    alert("Passo 3" + statuslog)
+       
         callBody()
     }
     tokenSt()
@@ -147,9 +148,20 @@ function retPrincipal() {
 }
 
 const tokenSt = () => {
+
     let token = localStorage.getItem('token')
     //alert("Token :" + token)
-    google.script.run.withSuccessHandler(tokenStat).TokenStatus(token)
+    google.script.run.withSuccessHandler(lookToken).TokenStatus(token)
+}
+
+
+const lookToken = ( options ) => {
+
+  Token = options.retToken
+
+  console.log(Token)
+
+
 }
 
 
@@ -168,7 +180,9 @@ const desLogUsr = () => {
 function lookDesLg(options) {
 
     const rt = options
+
     console.log(options)
+    
     if (rt === "Logado") {
 
       pagePrincipal()
